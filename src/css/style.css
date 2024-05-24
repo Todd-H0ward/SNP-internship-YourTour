@@ -95,3 +95,18 @@ body {
     margin: 0 auto;
 }
 
+/* Choice */
+
+.choice {
+    padding: 135px 0;
+    text-align: center;
+}
+
+.choice__title {
+    margin-bottom: 35px;
+}
+
+.tabs__items {
+    margin-bottom: 100px;
+}
+
