@@ -1,0 +1,27 @@
+@import "../utils/variables";
+
+.menu__list {
+    display: flex;
+    gap: 50px;
+}
+
+.menu__link {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        transition: width .3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "base/typography";
+
+@import "utils/variables";
+
+@import "components/buttons";
+@import "components/card";
+@import "components/dropdown";
+@import "components/input";
+@import "components/tabs";
+
+@import "layout/grid";
+@import "layout/choice";
+@import "layout/form";
+@import "layout/header";
+@import "layout/intro";
+@import "layout/main";
+@import "layout/make";
+@import "layout/navigation";
+
+// reset
+
+*, *::before, *::after {
+    all: unset;
+    display: revert;
+    box-sizing: border-box;
+    list-style: none;
+    cursor: revert;
+}
+
+// Globals
+
+body {
+    font-family: Roboto, sans-serif;
+    color: $black;
+    font-weight: 400;
+    font-style: normal;
+    background: $beige-100;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}

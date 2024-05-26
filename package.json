@@ -1,0 +1,25 @@
+{
+  "name": "yourtour",
+  "version": "1.0.0",
+  "description": "SNP internship project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.2"
+  }
+}

@@ -1,0 +1,41 @@
+@import "../utils/variables";
+@import "../base/typography";
+
+.tabs {
+    display: inline-flex;
+    gap: 30px;
+
+    &__item {
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 4px;
+        @extend .p-big;
+
+        &--active {
+            color: $orange-200;
+
+            &::after {
+                background: $orange-200;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 0;
+            height: 2px;
+            margin: 0 auto;
+            background: $black;
+            transition: width .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+    }
+}

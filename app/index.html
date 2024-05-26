@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Your tour</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="SNP internship project YourTour">
+    <meta name="keywords" content="traveling snp internship">
 </head>
 <body>
     <div class="wrapper">
@@ -11,7 +13,7 @@
             <div class="container">
                 <div class="header__inner">
                     <a class="logo" href="#">
-                        <img class="logo__image" src="src/images/logo.svg" alt="logo">
+                        <img class="logo__image" src="images/logo.svg" alt="logo">
                     </a>
                     <nav class="menu">
                         <ul class="menu__list">
@@ -47,15 +49,15 @@
                 <div class="container">
                     <h2 class="choice__title h2">Выбери свой тур</h2>
                     <div class="tabs__items tabs">
-                        <button class="tabs__item p-big tabs__item--active">Популярные</button>
-                        <button class="tabs__item p-big">Авторские</button>
-                        <button class="tabs__item p-big">Походы</button>
-                        <button class="tabs__item p-big">Сплавы</button>
-                        <button class="tabs__item p-big">Велопрогулки</button>
+                        <button class="tabs__item tabs__item--active">Популярные</button>
+                        <button class="tabs__item">Авторские</button>
+                        <button class="tabs__item">Походы</button>
+                        <button class="tabs__item">Сплавы</button>
+                        <button class="tabs__item">Велопрогулки</button>
                     </div>
                     <div class="choice__grid grid">
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-1.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-1.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -63,7 +65,7 @@
                             </div>
                         </a>
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-2.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-2.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -71,7 +73,7 @@
                             </div>
                         </a>
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-3.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-3.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -79,7 +81,7 @@
                             </div>
                         </a>
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-4.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-4.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -87,7 +89,7 @@
                             </div>
                         </a>
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-5.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-5.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -95,7 +97,7 @@
                             </div>
                         </a>
                         <a class="card">
-                            <img class="card__image" src="src/images/travel/photo-6.jpg" alt="travel image">
+                            <img class="card__image" src="images/travel/photo-6.jpg" alt="travel image">
                             <div class="card__content">
                                 <h3 class="card__title h3">Путешествие в горы</h3>
                                 <p class="card__price p-small">от 80 000 руб</p>
@@ -103,6 +105,57 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </section>
+            <section class="make">
+                <div class="container">
+                    <h2 class="make__title h2">Собери свой тур</h2>
+                    <p class="make__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+                    <form class="grid form">
+                        <div class="form__item">
+                            <label class="label" for="name">Имя</label>
+                            <input class="input" type="text" id="name" placeholder="Введите Ваше имя">
+                        </div>
+                        <div class="form__item">
+                            <label class="label" for="direction">Направление</label>
+                            <select class="input dropdown" name="direction" id="direction">
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <label class="label" for="email">Email</label>
+                            <input class="input" type="text" id="email" placeholder="example@mail.com">
+                        </div>
+                        <div class="form__item">
+                            <label class="label" for="tel">Телефон</label>
+                            <input class="input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                        </div>
+                        <div class="form__item form__item--long">
+                            <label class="label" for="comment">Комментарий</label>
+                            <textarea id="comment" class="input form__textarea"></textarea>
+                        </div>
+                        <div class="form__item form__item--long">
+                            <p class="form__text">Вам есть 18 лет?</p>
+                            <div class="form__radio-btns">
+                                <label class="label">
+                                    <input class="radio" type="radio" name="is_adult" value="yes"> Да
+                                </label>
+                                <label class="label">
+                                    <input class="radio" type="radio" name="is_adult" value="no"> Нет
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__item form__item--long">
+                            <label class="label form__agreement">
+                                <input class="checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <span class="form__agreement--accent">Лицензионного договора</span>
+                            </label>
+                        </div>
+                        <div class="form__item form__item--short">
+                            <button class="big-btn" type="submit">Найти тур</button>
+                        </div>
+                        <div class="form__item form__item--short">
+                            <button class="big-btn big-btn--reset" type="reset">Сбросить</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>

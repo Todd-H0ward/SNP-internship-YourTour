@@ -1,0 +1,77 @@
+@import "../utils/variables";
+
+.btn {
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: $black;
+    background: $white;
+    cursor: pointer;
+    transition: background .4s, color .2s;
+
+    &:hover {
+        background: $orange-200;
+        color: $white;
+    }
+
+    &:active {
+        background: $orange-100;
+        color: $black;
+    }
+
+}
+
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 42px;
+    width: 199px;
+
+    &::after {
+        content: "";
+        width: 24px;
+        height: 26px;
+        background: url("../../images/icons/arrow-icon.svg");
+    }
+
+    &:hover {
+        background: $green-400;
+        border-radius: 50px;
+    }
+}
+
+.big-btn {
+    @extend .p-normal;
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-radius: 10px;
+    background: $green-400;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background: $green-300;
+    }
+
+    &:active {
+        background: $green-200;
+    }
+
+    &--reset {
+        color: $green-400;
+        background: $green-100;
+
+        &:hover {
+            background: $gray-100;
+        }
+
+        &:active {
+            background: $gray-200;
+        }
+    }
+}
+
