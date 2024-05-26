@@ -1,0 +1,45 @@
+@import "../base/typography";
+@import "../utils/variables";
+
+.form {
+    padding: 70px;
+    background: $white;
+    border-radius: 50px;
+    grid-template-columns: repeat(4, 235px);
+    grid-column-gap: 30px;
+    grid-row-gap: 33px;
+
+    &__agreement {
+        @extend .p-small;
+        color: $gray-300;
+
+        &--accent {
+            color: $black;
+        }
+    }
+
+    &__item {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 8px;
+
+        &--long {
+            grid-column: span 4;
+        }
+
+        &--short {
+            grid-column: span 1;
+        }
+    }
+
+    &__textarea {
+        height: 152px;
+    }
+
+    &__radio-btns {
+        display: flex;
+        gap: 31px;
+    }
+}

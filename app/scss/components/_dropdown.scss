@@ -1,0 +1,10 @@
+@import "../utils/variables";
+
+.dropdown {
+    @extend .p-normal;
+    padding: 20px;
+    border: 1px solid $beige-200;
+    border-radius: 10px;
+    background: $beige-100;
+    transition: all .3s;
+}

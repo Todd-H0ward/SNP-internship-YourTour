@@ -1,0 +1,69 @@
+@import "../utils/variables";
+
+.input {
+    @extend .p-normal;
+    padding: 20px;
+    border: 1px solid $beige-200;
+    border-radius: 10px;
+    background: $beige-100;
+    transition: all .3s;
+
+    &::placeholder {
+        color: $gray-300;
+    }
+
+    &:hover {
+        background: $beige-200;
+    }
+
+    &:focus {
+        border-color: $gray-300;
+        background: $beige-200;
+    }
+}
+
+.radio {
+    width: 26px;
+    height: 26px;
+    border: 2px solid $black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:checked::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: $black;
+        border-radius: 50%;
+    }
+}
+
+.checkbox {
+    width: 26px;
+    height: 26px;
+    border: 2px solid $black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:checked::before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 10px;
+        background: url("../../images/icons/checkbox-arrow.svg");
+    }
+}
+
+.label {
+    @extend .p-normal;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
