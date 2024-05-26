@@ -3,16 +3,31 @@
 .header {
     padding: 29px 0;
     color: $white;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-
+    transition: all .3s;
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+}
+
+.header-fixed {
+    position: fixed;
+    color: $black;
+    background: rgba(243, 239, 232, 0.60);
+    backdrop-filter: blur(27px);
+
+    .logo__image path {
+        fill: $black;
+    }
+
+    .menu__link::after {
+        background-color: $black;
+    }
 }
