@@ -11,8 +11,7 @@ function styles() {
             outputStyle: "compressed",
         }).on("error", gulpSass.logError))
         .pipe(autoPrefix({
-            overrideBrowserslist: ["last 10 versions"],
-            grid: true,
+            overrideBrowserslist: ["last 5 versions"],
         }))
         .pipe(concat("style.min.css"))
         .pipe(gulp.dest("app/css"))
@@ -21,7 +20,6 @@ function styles() {
 
 function scripts() {
     return gulp.src([
-        "node_modules/jquery/dist/jquery.js",
         "app/js/main.js"
     ])
         .pipe(concat("main.min.js"))
