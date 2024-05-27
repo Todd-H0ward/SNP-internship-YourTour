@@ -15,8 +15,9 @@ body {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1230px;
     width: 100%;
+    padding: 0 30px;
     margin: 0 auto;
 }
 
@@ -44,7 +45,7 @@ body {
     &__subtitle {
         max-width: 562px;
         color: $white;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -80,5 +81,28 @@ body {
 
     &__subtitle {
         max-width: 420px;
+    }
+}
+
+// Photos
+
+.photos {
+    padding: 0 30px;
+    &__subtitle {
+        max-width: 405px;
+    }
+
+    &__grid {
+        grid-template-columns: repeat(20, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    &__item {
+        min-height: 301px;
+        border-radius: 50px;
+        grid-column: span 5;
+        &--small {
+            grid-column: span 4;
+        }
     }
 }
