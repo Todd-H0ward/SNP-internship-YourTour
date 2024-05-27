@@ -598,8 +598,9 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1230px;
   width: 100%;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -623,7 +624,7 @@ body {
 .intro__subtitle {
   max-width: 562px;
   color: #FFF;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .choice {
@@ -647,6 +648,25 @@ body {
 }
 .reviews__subtitle {
   max-width: 420px;
+}
+
+.photos {
+  padding: 0 30px;
+}
+.photos__subtitle {
+  max-width: 405px;
+}
+.photos__grid {
+  grid-template-columns: repeat(20, 1fr);
+  grid-column-gap: 30px;
+}
+.photos__item {
+  min-height: 301px;
+  border-radius: 50px;
+  grid-column: span 5;
+}
+.photos__item--small {
+  grid-column: span 4;
 }
 
 /*# sourceMappingURL=main.css.map */
