@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+.title {
+    @extend .h2;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+.subtitle {
+    @extend .p-normal;
+    color: $gray-300;
+    text-align: center;
+    margin: 0 auto 100px;
+}
