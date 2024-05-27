@@ -2,9 +2,9 @@
 @import "../utils/mixins";
 
 body {
+    @extend .p-normal;
     font-family: Roboto, sans-serif;
     color: $black;
-    font-weight: 400;
     font-style: normal;
     background: $beige-100;
 }
@@ -75,7 +75,7 @@ body {
 
     &__item {
         min-height: 301px;
-        border-radius: 50px;
+        border-radius: $border-radius;
         grid-column: span 5;
         &--small {
             grid-column: span 4;
@@ -87,4 +87,36 @@ body {
 
 .history__inner {
     @include flex-column(50px);
+}
+
+// Action
+
+.action {
+    &__image {
+        border-radius: $border-radius;
+    }
+
+    &__info {
+        @include flex-column(20px);
+        justify-content: center;
+    }
+
+    &__title {
+        @extend .h3;
+    }
+
+    &__item:first-child {
+        grid-column: 3 / 7;
+    }
+
+    &__item:last-child {
+        grid-column: 7 / 11;
+    }
+
+    &__text {
+        color: $gray-300;
+        &--accent {
+            color: $black;
+        }
+    }
 }
