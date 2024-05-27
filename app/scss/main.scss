@@ -5,9 +5,11 @@
 @import "base/helpers";
 
 @import "utils/variables";
+@import "utils/mixins";
 
 @import "components/buttons";
 @import "components/card";
+@import "components/card-history";
 @import "components/card-review";
 @import "components/dropdown";
 @import "components/input";

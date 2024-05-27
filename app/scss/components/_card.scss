@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .card {
     text-align: left;
@@ -22,11 +23,9 @@
     }
 
     &__content {
+        @include flex-column(16px);
         color: $white;
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
         text-align: left;
         grid-column: span 4;
         padding: 50px;
