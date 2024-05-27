@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 body {
     font-family: Roboto, sans-serif;
@@ -34,11 +35,8 @@ body {
     }
 
     &__inner {
+        @include flex-column(50px);
         max-width: 768px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
         margin: 0 auto;
     }
 
@@ -59,38 +57,16 @@ body {
     margin-bottom: 100px;
 }
 
-// Make
-
-.make {
-    &__title {
-        margin-bottom: 30px;
-    }
-
-    &__subtitle {
-        max-width: 480px;
-        margin: 0 auto 100px;
-    }
-}
-
 // Reviews
 
-.reviews {
-    &__title {
-        max-width: 530px;
-    }
-
-    &__subtitle {
-        max-width: 420px;
-    }
+.reviews__title {
+    max-width: 530px;
 }
 
 // Photos
 
 .photos {
     padding: 0 30px;
-    &__subtitle {
-        max-width: 405px;
-    }
 
     &__grid {
         grid-template-columns: repeat(20, 1fr);
@@ -105,4 +81,10 @@ body {
             grid-column: span 4;
         }
     }
+}
+
+// History
+
+.history__inner {
+    @include flex-column(50px);
 }

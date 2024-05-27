@@ -8,6 +8,7 @@
 
 .subtitle {
     @extend .p-normal;
+    max-width: 405px;
     color: $gray-300;
     text-align: center;
     margin: 0 auto 100px;
