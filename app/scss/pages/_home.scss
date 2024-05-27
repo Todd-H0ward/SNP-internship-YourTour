@@ -1,0 +1,84 @@
+@import "../utils/variables";
+
+body {
+    font-family: Roboto, sans-serif;
+    color: $black;
+    font-weight: 400;
+    font-style: normal;
+    background: $beige-100;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// intro
+
+.intro {
+    padding: 207px 0 119px;
+    background: url("../../images/header-bg.jpg") no-repeat;
+    background-size: cover;
+    color: $white;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__inner {
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        max-width: 562px;
+        color: $white;
+        margin-bottom: 0px;
+    }
+}
+
+// Choice
+
+.choice {
+    text-align: center;
+}
+
+.tabs__items {
+    margin-bottom: 100px;
+}
+
+// Make
+
+.make {
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        max-width: 480px;
+        margin: 0 auto 100px;
+    }
+}
+
+// Reviews
+
+.reviews {
+    &__title {
+        max-width: 530px;
+    }
+
+    &__subtitle {
+        max-width: 420px;
+    }
+}

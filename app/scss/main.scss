@@ -2,42 +2,21 @@
 
 @import "base/reset";
 @import "base/typography";
+@import "base/helpers";
 
 @import "utils/variables";
 
 @import "components/buttons";
 @import "components/card";
+@import "components/card-review";
 @import "components/dropdown";
 @import "components/input";
 @import "components/tabs";
 
 @import "layout/grid";
-@import "layout/choice";
 @import "layout/form";
 @import "layout/header";
-@import "layout/intro";
 @import "layout/main";
-@import "layout/make";
 @import "layout/navigation";
 
-// Globals
-
-body {
-    font-family: Roboto, sans-serif;
-    color: $black;
-    font-weight: 400;
-    font-style: normal;
-    background: $beige-100;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-}
+@import "pages/home";

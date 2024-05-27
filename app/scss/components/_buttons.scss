@@ -1,6 +1,7 @@
 @import "../utils/variables";
 
 .btn {
+    @extend .p-small;
     padding: 5px 20px;
     border-radius: 10px;
     color: $black;
@@ -21,23 +22,19 @@
 }
 
 .arrow-btn {
+    @extend .p-big;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    padding: 7px 20px;
     gap: 15px;
-    height: 42px;
-    width: 199px;
+    border-radius: 50px;
+    transition: all .3s;
 
     &::after {
         content: "";
         width: 24px;
         height: 26px;
         background: url("../../images/icons/arrow-icon.svg");
-    }
-
-    &:hover {
-        background: $green-400;
-        border-radius: 50px;
     }
 }
 
