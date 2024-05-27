@@ -122,7 +122,7 @@ meter {
   line-height: 124%;
 }
 
-.h3, .card-review__name, .card-history__title, .card__title {
+.h3, .action__title, .card-review__name, .card-history__title, .card__title {
   font-size: 35px;
   font-weight: 500;
   line-height: 122%;
@@ -134,7 +134,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
+.p-normal, body, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -454,7 +454,7 @@ meter {
   line-height: 124%;
 }
 
-.h3, .card__title, .card-history__title, .card-review__name {
+.h3, .action__title, .card__title, .card-history__title, .card-review__name {
   font-size: 35px;
   font-weight: 500;
   line-height: 122%;
@@ -466,7 +466,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+.p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -530,7 +530,7 @@ meter {
   line-height: 124%;
 }
 
-.h3, .card__title, .card-history__title, .card-review__name {
+.h3, .action__title, .card__title, .card-history__title, .card-review__name {
   font-size: 35px;
   font-weight: 500;
   line-height: 122%;
@@ -542,7 +542,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+.p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -664,7 +664,6 @@ meter {
 body {
   font-family: Roboto, sans-serif;
   color: #1B1F2B;
-  font-weight: 400;
   font-style: normal;
   background: #F9F7F4;
 }
@@ -738,6 +737,29 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+}
+
+.action__image {
+  border-radius: 50px;
+}
+.action__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.action__item:first-child {
+  grid-column: 3/7;
+}
+.action__item:last-child {
+  grid-column: 7/11;
+}
+.action__text {
+  color: #A6A6A6;
+}
+.action__text--accent {
+  color: #1B1F2B;
 }
 
 /*# sourceMappingURL=main.css.map */

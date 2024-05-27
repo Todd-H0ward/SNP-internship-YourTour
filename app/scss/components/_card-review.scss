@@ -5,7 +5,7 @@
     @include flex-column;
     grid-column: span 6;
     padding: 40px;
-    border-radius: 50px;
+    border-radius: $border-radius;
     background: $beige-200;
 
     &__text {
