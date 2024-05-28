@@ -61,6 +61,9 @@
 .label {
     @extend .p-normal;
     @include flex-row(11px);
-
     justify-content: left;
+
+    &--no-gap {
+        gap: 0;
+    }
 }

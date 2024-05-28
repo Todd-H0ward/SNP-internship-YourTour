@@ -8,6 +8,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    max-height: 567px;
 
     &__image {
         max-width: 100%;
@@ -46,10 +47,15 @@
     &__footer {
         @include flex-row;
         justify-content: space-between;
+        align-items: flex-end;
         position: absolute;
-        bottom: 70px;
-        left: 70px;
-        right: 70px;
+        bottom: 60px;
+        left: 60px;
+        right: 60px;
+    }
+
+    &__btn {
+        transform: translate(-20px, 7px);
     }
 
     &__socials-list {
@@ -62,7 +68,6 @@
         }
 
         .card-history__btn {
-            transform: translateX(-20px);
             background: $green-400;
         }
     }
