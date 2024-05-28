@@ -3,12 +3,14 @@
 
 .card-history {
     @extend .p-normal;
+    @include flex-row;
+    align-items: stretch;
     color: $white;
     border-radius: $border-radius;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    max-height: 567px;
+    height: 567px;
 
     &__image {
         max-width: 100%;

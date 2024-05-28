@@ -6,8 +6,8 @@
     padding: 70px;
     background: $white;
     border-radius: $border-radius;
-    grid-template-columns: repeat(4, 235px);
-    grid-column-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
 
     &__item {
         @include flex-column(8px);
@@ -45,5 +45,11 @@
     &__radio-btns {
         @include flex-row(31px);
         justify-content: left;
+    }
+}
+
+@media (max-width: 1024px) {
+    .form {
+        padding: 60px;
     }
 }
