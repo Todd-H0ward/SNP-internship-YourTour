@@ -1,9 +1,8 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .input {
     @extend .p-normal;
-    padding: 20px;
+    padding: clamp(10px, 2.5vw, 20px);
     border: 1px solid $beige-200;
     border-radius: 10px;
     background: $beige-100;
@@ -24,7 +23,7 @@
 }
 
 .radio {
-    @include flex-row;
+    @extend .flex-row;
     width: clamp(20px, 5vw, 26px);
     height: clamp(20px, 5vw, 26px);
     border: 2px solid $black;
@@ -42,7 +41,7 @@
 }
 
 .checkbox {
-    @include flex-row;
+    @extend .flex-row;
     width: 26px;
     height: 26px;
     border: 2px solid $black;
@@ -60,7 +59,7 @@
 
 .label {
     @extend .p-normal;
-    @include flex-row;
+    @extend .flex-row;
     gap: clamp(10px, 40vw, 11px);
     flex-wrap: wrap;
     justify-content: left;

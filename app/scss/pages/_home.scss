@@ -1,5 +1,4 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 body {
     @extend .p-normal;
@@ -10,16 +9,21 @@ body {
 }
 
 .wrapper {
-    @include flex-column(135px);
+    @extend .flex-column;
+    gap: clamp(75px, 20vw, 135px);
     align-items: stretch;
     overflow: hidden;
 }
 
 .container {
-    max-width: 1230px;
+    max-width: calc(1170px + 2 * clamp(21px, 5.8vw, 53px));
     width: 100%;
-    padding: 0 clamp(21px, 5.80vw, 53px);
+    padding: 0 clamp(21px, 5.8vw, 53px);
     margin: 0 auto;
+}
+
+.link {
+    color: $black;
 }
 
 // intro
@@ -31,7 +35,8 @@ body {
     color: $white;
 
     &__inner {
-        @include flex-column(50px);
+        @extend .flex-column;
+        gap: 50px;
         max-width: 768px;
         margin: 0 auto;
     }
@@ -52,6 +57,10 @@ body {
 
 .choice {
     text-align: center;
+
+    &__title {
+        margin-bottom: 35px;
+    }
 
     &__tabs {
         margin-bottom: clamp(42px, 10vw, 100px);
@@ -75,7 +84,7 @@ body {
     }
 
     &__wrapper {
-        @include flex-row;
+        @extend .flex-row;
         align-items: stretch;
         min-height: 301px;
         border-radius: $border-radius-change;
@@ -100,7 +109,7 @@ body {
 // History
 
 .history__inner {
-    @include flex-column;
+    @extend .flex-column;
     gap: clamp(20px, 5vw, 50px);
 }
 
@@ -108,12 +117,13 @@ body {
 
 .action {
     &__inner {
-        @include flex-row(30px);
+        @extend .flex-row;
+        gap: 30px;
     }
 
     &__image {
         border-radius: $border-radius-change;
-        width: clamp(130px, 37vw, 370px);
+        width: clamp(130px, 35vw, 370px);
     }
 
     &__item {
@@ -121,7 +131,8 @@ body {
     }
 
     &__info {
-        @include flex-column(20px);
+        @extend .flex-column;
+        gap: 20px;
         justify-content: center;
         align-items: flex-start;
     }
@@ -136,6 +147,18 @@ body {
             color: $black;
         }
     }
+
+    &__link {
+        position: relative;
+
+        &::after {
+            @extend .underline;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -143,8 +166,18 @@ body {
         gap: clamp(75px, 15vw, 135px);
     }
 
+    // Intro
+
     .intro__subtitle {
         max-width: 440px;
+    }
+
+    // Choice
+
+    .choice {
+        &__title {
+            margin-bottom: clamp(30px, 5vw, 35px)
+        }
     }
 
     .photos {
@@ -177,7 +210,7 @@ body {
     .intro {
         padding: clamp(140px, 3vw, 207px) 0 clamp(52px, 3vw, 119px);
         &__inner {
-            gap: 40px;
+            gap: clamp(40px, 7vw, 50px);
         }
     }
 

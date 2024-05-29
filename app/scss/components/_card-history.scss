@@ -1,9 +1,8 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .card-history {
     @extend .p-normal;
-    @include flex-row;
+    @extend .flex-row;
     align-items: stretch;
     color: $white;
     border-radius: $border-radius-change;
@@ -17,7 +16,7 @@
     }
 
     &__content {
-        padding: clamp(30px, 5vw, 60px);
+        padding: clamp(30px, 7vw, 60px);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -45,13 +44,13 @@
     }
 
     &__footer {
-        @include flex-row;
+        @extend .flex-row;
         justify-content: space-between;
         align-items: flex-end;
         position: absolute;
-        bottom: clamp(30px, 5vw, 60px);
-        left: clamp(30px, 5vw, 60px);
-        right: clamp(30px, 5vw, 60px);
+        bottom: clamp(30px, 7vw, 60px);
+        left: clamp(30px, 7vw, 60px);
+        right: clamp(30px, 7vw, 60px);
     }
 
     &__btn {
@@ -59,7 +58,7 @@
     }
 
     &__socials-list {
-        @include flex-row;
+        @extend .flex-row;
         flex-wrap: wrap;
         column-gap: clamp(5px, 2vw, 35px);
     }

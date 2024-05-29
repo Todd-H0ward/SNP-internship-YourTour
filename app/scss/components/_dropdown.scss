@@ -1,10 +1,33 @@
 @import "../utils/variables";
 
+.dropdown-wrapper {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: url("../../images/icons/dropdown-icon.svg");
+        top: 50%;
+        right: 20px;
+        z-index: 100;
+        transform: translateY(-50%);
+        transition: all .3s;
+    }
+}
+
 .dropdown {
     @extend .p-normal;
+    width: 100%;
     padding: 20px;
     border: 1px solid $beige-200;
     border-radius: 10px;
     background: $beige-100;
     transition: all .3s;
+    position: relative;
+    flex: 1 1 auto;
 }
+

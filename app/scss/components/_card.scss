@@ -1,8 +1,7 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .card {
-    @include flex-column;
+    @extend .flex-column;
     align-items: stretch;
     text-align: left;
     grid-column: span 4;
@@ -24,7 +23,8 @@
     }
 
     &__content {
-        @include flex-column(16px);
+        @extend .flex-column;
+        gap: 16px;
         color: $white;
         align-items: flex-start;
         text-align: left;

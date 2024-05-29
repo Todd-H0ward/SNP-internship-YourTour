@@ -1,12 +1,13 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .menu__list {
-    @include flex-row(50px);
+    @extend .flex-row;
+    gap: clamp(30px, 3vw, 50px);
 }
 
 .menu__link {
     position: relative;
+    @extend .p-normal;
 
     &::after {
         @extend .underline;
@@ -15,12 +16,6 @@
 
     &:hover::after {
         width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .menu__list {
-        gap: 30px;
     }
 }
 

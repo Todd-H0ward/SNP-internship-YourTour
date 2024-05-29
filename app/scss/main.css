@@ -135,7 +135,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, body, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
+.p-normal, body, .menu__link, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -169,7 +169,7 @@ meter {
     font-size: clamp(16px, 4vw, 23px);
     line-height: 142%;
   }
-  .p-normal, body, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
+  .p-normal, body, .menu__link, .label, .input, .dropdown, .card-history, .big-btn, .subtitle {
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
     line-height: 142%;
@@ -202,7 +202,7 @@ meter {
   transition: all 0.3s ease;
 }
 
-.underline, .footer__text::after, .menu__link::after, .tabs__item::after, .card-history__socials-item::after {
+.underline, .action__link::after, .footer__text::after, .menu__link::after, .tabs__item::after, .card-history__socials-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -213,6 +213,18 @@ meter {
   margin: 0 auto;
   background: #1B1F2B;
   transition: width 0.3s;
+}
+
+.flex-column, .action__info, .history__inner, .intro__inner, .wrapper, .form__item, .card-review, .card__content, .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row, .action__inner, .photos__wrapper, .footer__link, .footer__socials, .footer__inner, .menu__list, .form__radio-btns, .label, .checkbox, .radio, .card-history__socials-list, .card-history__footer, .card-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Colors */
@@ -281,10 +293,6 @@ meter {
 
 /* Colors */
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
   align-items: stretch;
   text-align: left;
   grid-column: span 4;
@@ -299,9 +307,6 @@ meter {
   max-width: 230px;
 }
 .card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
   color: #FFF;
   align-items: flex-start;
@@ -339,10 +344,6 @@ meter {
 }
 /* Colors */
 .card-history {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   align-items: stretch;
   color: #FFF;
   border-radius: clamp(20px, 5vw, 50px);
@@ -352,7 +353,7 @@ meter {
   height: clamp(455px, 80vw, 567px);
 }
 .card-history__content {
-  padding: clamp(30px, 5vw, 60px);
+  padding: clamp(30px, 7vw, 60px);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -374,25 +375,17 @@ meter {
   margin-inline: 11px;
 }
 .card-history__footer {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  bottom: clamp(30px, 5vw, 60px);
-  left: clamp(30px, 5vw, 60px);
-  right: clamp(30px, 5vw, 60px);
+  bottom: clamp(30px, 7vw, 60px);
+  left: clamp(30px, 7vw, 60px);
+  right: clamp(30px, 7vw, 60px);
 }
 .card-history__btn {
   transform: translate(-20px, 7px);
 }
 .card-history__socials-list {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   flex-wrap: wrap;
   column-gap: clamp(5px, 2vw, 35px);
 }
@@ -422,10 +415,6 @@ meter {
 }
 /* Colors */
 .card-review {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
   grid-column: span 6;
   padding: clamp(20px, 5vw, 40px);
   border-radius: clamp(20px, 5vw, 50px);
@@ -456,17 +445,38 @@ meter {
   border-radius: 50%;
 }
 /* Colors */
+.dropdown-wrapper {
+  position: relative;
+}
+.dropdown-wrapper::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: url("../../images/icons/dropdown-icon.svg");
+  top: 50%;
+  right: 20px;
+  z-index: 100;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
 .dropdown {
+  width: 100%;
   padding: 20px;
   border: 1px solid #F4F0E9;
   border-radius: 10px;
   background: #F9F7F4;
   transition: all 0.3s;
+  position: relative;
+  flex: 1 1 auto;
 }
 
 /* Colors */
 .input {
-  padding: 20px;
+  padding: clamp(10px, 2.5vw, 20px);
   border: 1px solid #F4F0E9;
   border-radius: 10px;
   background: #F9F7F4;
@@ -484,10 +494,6 @@ meter {
 }
 
 .radio {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   width: clamp(20px, 5vw, 26px);
   height: clamp(20px, 5vw, 26px);
   border: 2px solid #1B1F2B;
@@ -504,10 +510,6 @@ meter {
 }
 
 .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   width: 26px;
   height: 26px;
   border: 2px solid #1B1F2B;
@@ -523,10 +525,6 @@ meter {
 }
 
 .label {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   gap: clamp(10px, 40vw, 11px);
   flex-wrap: wrap;
   justify-content: left;
@@ -562,7 +560,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+.p-normal, body, .menu__link, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -596,7 +594,7 @@ meter {
     font-size: clamp(16px, 4vw, 23px);
     line-height: 142%;
   }
-  .p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+  .p-normal, body, .menu__link, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
     line-height: 142%;
@@ -644,7 +642,6 @@ meter {
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 18px;
   }
 }
 /* Colors */
@@ -673,7 +670,7 @@ meter {
   line-height: 122%;
 }
 
-.p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+.p-normal, body, .menu__link, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
@@ -707,7 +704,7 @@ meter {
     font-size: clamp(16px, 4vw, 23px);
     line-height: 142%;
   }
-  .p-normal, body, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
+  .p-normal, body, .menu__link, .subtitle, .big-btn, .card-history, .dropdown, .input, .label {
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
     line-height: 142%;
@@ -721,16 +718,13 @@ meter {
 }
 /* Colors */
 .form {
-  padding: clamp(20px, 5.5vw, 70px);
+  padding: clamp(20px, 5.85vw, 70px);
   background: #FFF;
   border-radius: clamp(30px, 8vw, 50px);
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 30px;
 }
 .form__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 8px;
   grid-column: span 1;
   text-align: left;
@@ -746,10 +740,6 @@ meter {
 .form__agreement {
   color: #A6A6A6;
 }
-.form__agreement--accent {
-  color: #1B1F2B;
-  margin-left: 3px;
-}
 .form__checkbox {
   margin-right: 19px;
 }
@@ -757,13 +747,15 @@ meter {
   height: 152px;
 }
 .form__radio-btns {
-  display: flex;
-  align-items: center;
-  gap: 31px;
-  justify-content: center;
+  gap: 30px;
   justify-content: left;
 }
 
+@media (max-width: 1024px) {
+  .form {
+    grid-column-gap: 20px;
+  }
+}
 @media (max-width: 768px) {
   .form__item {
     grid-column: span 2;
@@ -819,10 +811,7 @@ meter {
 }
 /* Colors */
 .menu__list {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  justify-content: center;
+  gap: clamp(30px, 3vw, 50px);
 }
 
 .menu__link {
@@ -835,11 +824,6 @@ meter {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .menu__list {
-    gap: 30px;
-  }
-}
 @media (max-width: 768px) {
   .menu__list {
     display: none;
@@ -854,27 +838,15 @@ meter {
   color: #A6A6A6;
 }
 .footer__inner {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   row-gap: 8px;
 }
 .footer__socials {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   gap: clamp(15px, 3vw, 25px);
 }
 .footer__link {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   gap: clamp(5px, 1vw, 10px);
 }
 .footer__text {
@@ -898,19 +870,20 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 135px;
+  gap: clamp(75px, 20vw, 135px);
   align-items: stretch;
   overflow: hidden;
 }
 
 .container {
-  max-width: 1230px;
+  max-width: calc(1170px + 2 * clamp(21px, 5.8vw, 53px));
   width: 100%;
   padding: 0 clamp(21px, 5.8vw, 53px);
   margin: 0 auto;
+}
+
+.link {
+  color: #1B1F2B;
 }
 
 .intro {
@@ -920,9 +893,6 @@ body {
   color: #FFF;
 }
 .intro__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 50px;
   max-width: 768px;
   margin: 0 auto;
@@ -938,6 +908,9 @@ body {
 
 .choice {
   text-align: center;
+}
+.choice__title {
+  margin-bottom: 35px;
 }
 .choice__tabs {
   margin-bottom: clamp(42px, 10vw, 100px);
@@ -955,10 +928,6 @@ body {
   grid-column-gap: 30px;
 }
 .photos__wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
   align-items: stretch;
   min-height: 301px;
   border-radius: clamp(20px, 5vw, 50px);
@@ -975,30 +944,20 @@ body {
 }
 
 .history__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
   gap: clamp(20px, 5vw, 50px);
 }
 
 .action__inner {
-  display: flex;
-  align-items: center;
   gap: 30px;
-  justify-content: center;
 }
 .action__image {
   border-radius: clamp(20px, 5vw, 50px);
-  width: clamp(130px, 37vw, 370px);
+  width: clamp(130px, 35vw, 370px);
 }
 .action__item {
   max-width: 370px;
 }
 .action__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
@@ -1009,6 +968,12 @@ body {
 .action__text--accent {
   color: #1B1F2B;
 }
+.action__link {
+  position: relative;
+}
+.action__link:hover:after {
+  width: 100%;
+}
 
 @media (max-width: 1024px) {
   .wrapper {
@@ -1016,6 +981,9 @@ body {
   }
   .intro__subtitle {
     max-width: 440px;
+  }
+  .choice__title {
+    margin-bottom: clamp(30px, 5vw, 35px);
   }
   .photos {
     padding: 0 20px;
@@ -1040,7 +1008,7 @@ body {
     padding: clamp(140px, 3vw, 207px) 0 clamp(52px, 3vw, 119px);
   }
   .intro__inner {
-    gap: 40px;
+    gap: clamp(40px, 7vw, 50px);
   }
   .photos {
     padding: 0 21px;

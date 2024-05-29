@@ -1,8 +1,7 @@
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .card-review {
-    @include flex-column;
+    @extend .flex-column;
     grid-column: span 6;
     padding: clamp(20px, 5vw, 40px);
     border-radius: $border-radius-change;

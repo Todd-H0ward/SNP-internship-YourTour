@@ -1,16 +1,16 @@
 @import "../base/typography";
 @import "../utils/variables";
-@import "../utils/mixins";
 
 .form {
-    padding: clamp(20px, 5.5vw, 70px);
+    padding: clamp(20px, 5.85vw, 70px);
     background: $white;
     border-radius: clamp($border-radius-middle, 8vw, $border-radius);
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 30px;
 
     &__item {
-        @include flex-column(8px);
+        @extend .flex-column;
+        gap: 8px;
         grid-column: span 1;
         text-align: left;
         align-items: stretch;
@@ -28,11 +28,6 @@
     &__agreement {
         @extend .p-small;
         color: $gray-300;
-
-        &--accent {
-            color: $black;
-            margin-left: 3px;
-        }
     }
 
     &__checkbox {
@@ -44,8 +39,15 @@
     }
 
     &__radio-btns {
-        @include flex-row(31px);
+        @extend .flex-row;
+        gap: 30px;
         justify-content: left;
+    }
+}
+
+@media (max-width: 1024px) {
+    .form {
+        grid-column-gap: 20px;
     }
 }
 

@@ -6,7 +6,8 @@
     <meta name="description" content="SNP internship project YourTour">
     <meta name="keywords" content="traveling snp internship">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="images/icons/favicon.svg">
+    <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
     <div class="wrapper">
@@ -28,16 +29,16 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link p-normal" href="#">Туры</a>
+                                <a class="menu__link" href="#choice">Туры</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link p-normal" href="#">Создать тур</a>
+                                <a class="menu__link" href="#make">Создать тур</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link p-normal" href="#">Отзывы</a>
+                                <a class="menu__link" href="#reviews">Отзывы</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link p-normal" href="#">Истории</a>
+                                <a class="menu__link" href="#history">Истории</a>
                             </li>
                         </ul>
                     </nav>
@@ -54,7 +55,7 @@
                 </div>
             </div>
         </section>
-        <section class="choice">
+        <section class="choice" id="choice">
             <div class="container">
                 <h2 class="choice__title title">Выбери свой тур</h2>
                 <div class="choice__tabs tabs__items tabs">
@@ -116,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="make">
+        <section class="make" id="make">
             <div class="container">
                 <h2 class="title">Собери свой тур</h2>
                 <p class="make__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
@@ -127,8 +128,14 @@
                     </div>
                     <div class="form__item">
                         <label class="label" for="direction">Направление</label>
-                        <select class="input dropdown" name="direction" id="direction">
-                        </select>
+                        <div class="dropdown-wrapper">
+                            <select class="input dropdown" name="direction" id="direction">
+                                <option value="" selected disabled hidden>Куда хотие ехать?</option>
+                                <option value="istanbul">Стамбул</option>
+                                <option value="yerevan">Ереван</option>
+                                <option value="prague">Прага</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form__item">
                         <label class="label" for="email">Email</label>
@@ -136,15 +143,15 @@
                     </div>
                     <div class="form__item">
                         <label class="label" for="tel">Телефон</label>
-                        <input class="input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                        <input class="input phone-input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
                     </div>
                     <div class="form__item">
                         <label class="label" for="from">Дата от</label>
-                        <input class="input" type="date" id="from" placeholder="ДД.ММ.ГГГГ">
+                        <input class="input" id="from" placeholder="ДД.ММ.ГГГГ">
                     </div>
                     <div class="form__item">
                         <label class="label" for="to">Дата до</label>
-                        <input class="input" type="date" id="to" placeholder="ДД.ММ.ГГГГ">
+                        <input class="input" id="to" placeholder="ДД.ММ.ГГГГ">
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label" for="comment">Комментарий</label>
@@ -153,17 +160,17 @@
                     <div class="form__item form__item--long">
                         <p class="form__text">Вам есть 18 лет?</p>
                         <div class="form__radio-btns">
-                            <label class="label">
+                            <label class="label label--radio">
                                 <input class="radio" type="radio" name="is_adult" value="yes"> Да
                             </label>
-                            <label class="label">
+                            <label class="label label--radio">
                                 <input class="radio" type="radio" name="is_adult" value="no"> Нет
                             </label>
                         </div>
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label form__agreement label--no-gap">
-                            <input class="form__checkbox checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <a class="form__agreement--accent" href="#">Лицензионного договора</a>
+                            <input class="form__checkbox checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <a class="form__link link" href="#">Лицензионного договора</a>
                         </label>
                     </div>
                     <div class="form__item form__item--long form__item--group">
@@ -173,7 +180,7 @@
                 </form>
             </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <h2 class="reviews__title title">Отзывы наших путешественников</h2>
                 <p class="reviews__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
@@ -208,7 +215,7 @@
                 </div>
             </div>
         </section>
-        <section class="photos">
+        <section class="photos" id="photos">
             <h2 class="photos__title title">Фотографии путешествий</h2>
             <p class="photos__subtitle subtitle">
                 Идейные соображения высшего порядка, а также рамки и место обучения кадров
@@ -255,7 +262,7 @@
                 </div>
             </div>
         </section>
-        <section class="history">
+        <section class="history" id="history">
             <div class="history__container container">
                 <h2 class="history__title title">Истории путешествий</h2>
                 <p class="history__subtitle subtitle">
@@ -341,13 +348,13 @@
                 </div>
             </div>
         </section>
-        <section class="action">
+        <section class="action" id="action">
             <div class="container">
                 <div class="action__inner">
                     <img class="action__image action__item" src="images/footer.jpg" alt="footer image">
                     <div class="action__info action__item">
                         <h3 class="action__title">Пора в путешествие вместе с нами!</h3>
-                        <p class="action__text">Напиши на почту и узнай подробности на <span class="action__text--accent">yourtour@gmail.com</span></p>
+                        <p class="action__text">Напиши на почту и узнай подробности на <a class="action__link link">yourtour@gmail.com</a></p>
                     </div>
                 </div>
             </div>
