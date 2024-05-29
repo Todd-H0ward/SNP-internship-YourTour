@@ -1,4 +1,8 @@
 $border-radius: 50px;
+$border-radius-middle: 30px;
+$border-radius-small: 20px;
+
+$border-radius-change: clamp($border-radius-small, 5vw, $border-radius);
 
 /* Colors */
 $black: #1B1F2B;

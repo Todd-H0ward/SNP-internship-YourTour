@@ -9,12 +9,12 @@
     right: 0;
     z-index: 10;
     transition: all .3s;
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
-
 }
 
 .header-fixed {
@@ -29,5 +29,26 @@
 
     .menu__link::after {
         background-color: $black;
+    }
+}
+
+.logo {
+    width: clamp(133px, 19vw, 182px);
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__container {
+        padding: 0 clamp(20px, 7vw, 57px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__inner {
+        align-items: center;
     }
 }

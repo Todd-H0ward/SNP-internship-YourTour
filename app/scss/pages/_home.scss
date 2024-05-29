@@ -18,7 +18,7 @@ body {
 .container {
     max-width: 1230px;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 clamp(21px, 5.80vw, 53px);
     margin: 0 auto;
 }
 
@@ -30,14 +30,15 @@ body {
     background-size: cover;
     color: $white;
 
-    &__title {
-        text-align: center;
-    }
-
     &__inner {
         @include flex-column(50px);
         max-width: 768px;
         margin: 0 auto;
+    }
+
+    &__title {
+        @extend .h1;
+        text-align: center;
     }
 
     &__subtitle {
@@ -51,10 +52,10 @@ body {
 
 .choice {
     text-align: center;
-}
 
-.tabs__items {
-    margin-bottom: 100px;
+    &__tabs {
+        margin-bottom: clamp(42px, 10vw, 100px);
+    }
 }
 
 // Reviews
@@ -77,7 +78,7 @@ body {
         @include flex-row;
         align-items: stretch;
         min-height: 301px;
-        border-radius: $border-radius;
+        border-radius: $border-radius-change;
         grid-column: span 5;
         overflow: hidden;
         &:nth-child(5),
@@ -99,14 +100,24 @@ body {
 // History
 
 .history__inner {
-    @include flex-column(50px);
+    @include flex-column;
+    gap: clamp(20px, 5vw, 50px);
 }
 
 // Action
 
 .action {
+    &__inner {
+        @include flex-row(30px);
+    }
+
     &__image {
-        border-radius: $border-radius;
+        border-radius: $border-radius-change;
+        width: clamp(130px, 37vw, 370px);
+    }
+
+    &__item {
+        max-width: 370px;
     }
 
     &__info {
@@ -119,14 +130,6 @@ body {
         @extend .h3;
     }
 
-    &__image {
-        grid-column: 3 / 7;
-    }
-
-    &__info {
-        grid-column: 7 / 11;
-    }
-
     &__text {
         color: $gray-300;
         &--accent {
@@ -136,8 +139,8 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .container {
-        padding: 0 53px;
+    .wrapper {
+        gap: clamp(75px, 15vw, 135px);
     }
 
     .intro__subtitle {
@@ -168,14 +171,56 @@ body {
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: clamp(140px, 3vw, 207px) 0 clamp(52px, 3vw, 119px);
+        &__inner {
+            gap: 40px;
+        }
+    }
+
+    .photos {
+        padding: 0 21px;
+        &__grid {
+            grid-template-columns: repeat(6, 1fr);
+            grid-row-gap: 18px;
+            grid-column-gap: 10px;
+        }
+
+        &__wrapper {
+            min-height: 110px;
+            grid-column: span 3;
+            &:nth-child(6),
+            &:nth-child(8),
+            &:nth-child(9) {
+                grid-column: span 2;
+            }
+
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(12) {
+                display: none;
+            }
+        }
+    }
 
     .action {
         &__image {
-            grid-column: 2 / 7;
+            width: clamp(310px, 10wv, 130px);
+            border-radius: $border-radius-small;
         }
 
-        &__info {
-            grid-column: 7 / 12;
+        &__inner {
+            flex-direction: column;
+            text-align: center;
         }
+    }
+}
+
+@media (max-width: 375px) {
+    .intro__subtitle {
+        max-width: 250px;
     }
 }

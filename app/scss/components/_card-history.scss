@@ -6,20 +6,18 @@
     @include flex-row;
     align-items: stretch;
     color: $white;
-    border-radius: $border-radius;
+    border-radius: $border-radius-change;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 567px;
+    height: clamp(455px, 80vw, 567px);
 
     &__image {
-        max-width: 100%;
-        height: auto;
-        transition: all .3s ease;
+        @extend .bg-image;
     }
 
     &__content {
-        padding: 60px;
+        padding: clamp(30px, 5vw, 60px);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -34,7 +32,7 @@
 
     &__title {
         @extend .h3;
-        margin-bottom: 37px;
+        margin-bottom: clamp(20px, 5vw, 37px);
     }
 
     &__text {
@@ -51,9 +49,9 @@
         justify-content: space-between;
         align-items: flex-end;
         position: absolute;
-        bottom: 60px;
-        left: 60px;
-        right: 60px;
+        bottom: clamp(30px, 5vw, 60px);
+        left: clamp(30px, 5vw, 60px);
+        right: clamp(30px, 5vw, 60px);
     }
 
     &__btn {
@@ -61,7 +59,22 @@
     }
 
     &__socials-list {
-        @include flex-row(35px);
+        @include flex-row;
+        flex-wrap: wrap;
+        column-gap: clamp(5px, 2vw, 35px);
+    }
+
+    &__socials-item {
+        position: relative;
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &::after {
+            @extend .underline;
+            background: $white;
+        }
     }
 
     &:hover {
@@ -71,6 +84,18 @@
 
         .card-history__btn {
             background: $green-400;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .card-history {
+        &__title {
+            max-width: 145px;
+        }
+
+        &__socials-list {
+            display: none;
         }
     }
 }

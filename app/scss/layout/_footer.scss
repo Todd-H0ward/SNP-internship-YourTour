@@ -2,7 +2,7 @@
 @import "../utils/mixins";
 
 .footer {
-    padding: 30px 0;
+    padding: clamp(21px, 4vw, 30px) 0;
     background: $beige-200;
 
     &__text {
@@ -11,14 +11,36 @@
 
     &__inner {
         @include flex-row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        row-gap: 8px;
     }
 
     &__socials {
-        @include flex-row(25px);
+        @include flex-row;
+        gap: clamp(15px, 3vw, 25px)
     }
 
-    &__item {
-        @include flex-row(10px);
+    &__link {
+        @include flex-row;
+        gap: clamp(5px, 1vw, 10px);
+    }
+
+    &__text {
+        position: relative;
+        &::after {
+            @extend .underline;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .footer__inner {
+        justify-content: center;
     }
 }

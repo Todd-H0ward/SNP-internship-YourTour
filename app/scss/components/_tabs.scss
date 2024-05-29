@@ -3,13 +3,16 @@
 
 .tabs {
     display: inline-flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: clamp(10px, 2.9vw, 30px);
+    row-gap: 4px;
 
     &__item {
+        @extend .p-big;
         cursor: pointer;
         position: relative;
-        padding: 6px 0;
-        @extend .p-big;
+        padding-bottom: 6px;
 
         &--active {
             color: $orange-200;
@@ -20,17 +23,7 @@
         }
 
         &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            width: 0;
-            height: 2px;
-            margin: 0 auto;
-            background: $black;
-            transition: width .3s;
+            @extend .underline;
         }
 
         &:hover::after {

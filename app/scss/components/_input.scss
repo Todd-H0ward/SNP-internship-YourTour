@@ -25,8 +25,8 @@
 
 .radio {
     @include flex-row;
-    width: 26px;
-    height: 26px;
+    width: clamp(20px, 5vw, 26px);
+    height: clamp(20px, 5vw, 26px);
     border: 2px solid $black;
     border-radius: 50%;
     cursor: pointer;
@@ -60,7 +60,9 @@
 
 .label {
     @extend .p-normal;
-    @include flex-row(11px);
+    @include flex-row;
+    gap: clamp(10px, 40vw, 11px);
+    flex-wrap: wrap;
     justify-content: left;
 
     &--no-gap {

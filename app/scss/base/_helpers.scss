@@ -3,7 +3,7 @@
 .title {
     @extend .h2;
     text-align: center;
-    margin: 0 auto 30px;
+    margin: 0 auto clamp(20px, 3vw, 30px);
 }
 
 .subtitle {
@@ -11,5 +11,26 @@
     max-width: 405px;
     color: $gray-300;
     text-align: center;
-    margin: 0 auto 100px;
+    margin: 0 auto clamp(50px, 10vw, 100px);
+}
+
+.bg-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all .3s ease;
+}
+
+.underline {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background: $black;
+    transition: width .3s;
 }

@@ -9,16 +9,8 @@
     position: relative;
 
     &::after {
-        position: absolute;
-        content: "";
-        display: block;
-        margin: 0 auto;
-        right: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: $white;
-        transition: width .3s;
+        @extend .underline;
+        background: $white;
     }
 
     &:hover::after {
@@ -29,5 +21,11 @@
 @media (max-width: 1024px) {
     .menu__list {
         gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu__list {
+        display: none;
     }
 }

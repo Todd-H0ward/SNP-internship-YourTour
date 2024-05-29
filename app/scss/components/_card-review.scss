@@ -4,8 +4,8 @@
 .card-review {
     @include flex-column;
     grid-column: span 6;
-    padding: 40px;
-    border-radius: $border-radius;
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: $border-radius-change;
     background: $beige-200;
 
     &__text {
@@ -18,7 +18,7 @@
 
     &__info {
         display: flex;
-        padding-top: 70px;
+        padding-top: clamp(40px, 10vw, 70px);
         align-items: flex-end;
         align-self: stretch;
     }

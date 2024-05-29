@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Your tour</title>
-    <link rel="stylesheet" href="css/style.min.css">
     <meta name="description" content="SNP internship project YourTour">
     <meta name="keywords" content="traveling snp internship">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="header__container container">
                 <div class="header__inner">
-                    <a class="logo" href="#">
+                    <a class="header__logo logo" href="#">
                         <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="182" height="32" viewBox="0 0 182 32" fill="none">
                             <path d="m7.476.88 6.426 13.188L20.412.88h7.518L17.304 20.536V30.7h-6.846V20.452L0 .88h7.476z" fill="white"/>
                             <path d="M36.804 31.12c-2.52 0-4.662-.532-6.426-1.596-1.736-1.064-3.066-2.464-3.99-4.2-.924-1.736-1.386-3.612-1.386-5.628 0-2.044.462-3.934 1.386-5.67.924-1.736 2.268-3.136 4.032-4.2 1.764-1.064 3.892-1.596 6.384-1.596 2.492 0 4.62.532 6.384 1.596 1.764 1.064 3.108 2.464 4.032 4.2.924 1.736 1.386 3.626 1.386 5.67 0 2.016-.462 3.892-1.386 5.628-.924 1.736-2.268 3.136-4.032 4.2-1.764 1.064-3.892 1.596-6.384 1.596zM31.89 19.696c0 1.708.462 3.094 1.386 4.158.952 1.064 2.128 1.596 3.528 1.596 1.372 0 2.52-.532 3.444-1.596.952-1.064 1.428-2.45 1.428-4.158s-.476-3.094-1.428-4.158c-.924-1.064-2.072-1.596-3.444-1.596-1.4 0-2.576.532-3.528 1.596-.924 1.064-1.386 2.45-1.386 4.158z" fill="white"/>
@@ -45,9 +46,9 @@
             </div>
         </header>
         <section class="intro">
-            <div class="container">
+            <div class="intro__container container">
                 <div class="intro__inner">
-                    <h1 class="intro__title h1">Идеальные путешествия существуют</h1>
+                    <h1 class="intro__title">Идеальные путешествия существуют</h1>
                     <p class="intro__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                     <button class="intro__btn btn">Найти тур</button>
                 </div>
@@ -162,13 +163,11 @@
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label form__agreement label--no-gap">
-                            <input class="form__checkbox checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <span class="form__agreement--accent">Лицензионного договора</span>
+                            <input class="form__checkbox checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <a class="form__agreement--accent" href="#">Лицензионного договора</a>
                         </label>
                     </div>
-                    <div class="form__item form__item--short">
+                    <div class="form__item form__item--long form__item--group">
                         <button class="big-btn" type="submit">Найти тур</button>
-                    </div>
-                    <div class="form__item form__item--short">
                         <button class="big-btn big-btn--reset" type="reset">Сбросить</button>
                     </div>
                 </form>
@@ -257,7 +256,7 @@
             </div>
         </section>
         <section class="history">
-            <div class="container">
+            <div class="history__container container">
                 <h2 class="history__title title">Истории путешествий</h2>
                 <p class="history__subtitle subtitle">
                     Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
@@ -344,9 +343,9 @@
         </section>
         <section class="action">
             <div class="container">
-                <div class="action__grid grid">
-                    <img class="action__image" src="images/footer.jpg" alt="footer image">
-                    <div class="action__info">
+                <div class="action__inner">
+                    <img class="action__image action__item" src="images/footer.jpg" alt="footer image">
+                    <div class="action__info action__item">
                         <h3 class="action__title">Пора в путешествие вместе с нами!</h3>
                         <p class="action__text">Напиши на почту и узнай подробности на <span class="action__text--accent">yourtour@gmail.com</span></p>
                     </div>
@@ -359,20 +358,20 @@
                     <p class="footer__text">
                         Наши социальные сети
                     </p>
-                    <ul class="footer__socials">
-                        <li class="footer__item">
+                    <div class="footer__socials">
+                        <a class="footer__link" href="#">
                             <img class="footer__icon" src="images/icons/inst-icon.svg" alt="instagram icon">
-                            <a class="footer__link" href="#">instagram</a>
-                        </li>
-                        <li class="footer__item">
+                            <span class="footer__text">instagram</span>
+                        </a>
+                        <a class="footer__link" href="#">
                             <img class="footer__icon" src="images/icons/fb-icon.svg" alt="facebook icon">
-                            <a class="footer__link" href="#">facebook</a>
-                        </li>
-                        <li class="footer__item">
+                            <span class="footer__text">facebook</span>
+                        </a>
+                        <a class="footer__link" href="#">
                             <img class="footer__icon" src="images/icons/vk-icon.svg" alt="vkontakte icon">
-                            <a class="footer__link" href="#">vkontakte</a>
-                        </li>
-                    </ul>
+                            <span class="footer__text">vkontakte</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
