@@ -28,6 +28,7 @@
 
     &__text {
         position: relative;
+        color: $black;
         &::after {
             @extend .underline;
         }

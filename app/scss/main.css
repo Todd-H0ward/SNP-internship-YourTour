@@ -109,6 +109,11 @@ meter {
   display: none;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Colors */
 .h1, .intro__title {
   font-size: 96px;
@@ -525,7 +530,7 @@ meter {
   display: block;
   width: 13px;
   height: 10px;
-  background: url("../../images/icons/checkbox-arrow.svg");
+  background: url("../images/icons/checkbox-arrow.svg");
 }
 
 .label {
@@ -889,6 +894,7 @@ meter {
 }
 .footer__text {
   position: relative;
+  color: #1B1F2B;
 }
 .footer__text:hover::after {
   width: 100%;
