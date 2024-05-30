@@ -17,6 +17,7 @@
 
         &--long {
             grid-column: span 2;
+            gap: 9px;
         }
 
         &--group {
@@ -27,9 +28,10 @@
 
     &__agreement {
         @extend .p-small;
+        padding: 2px 0;
         color: $gray-300;
         flex-direction: row;
-        gap: 10px;
+        gap: 19px;
         flex-wrap: nowrap;
     }
 
@@ -47,6 +49,9 @@
 @media (max-width: 1024px) {
     .form {
         padding: 60px;
+        &__agreement {
+            gap: 10px;
+        }
     }
 }
 
@@ -71,6 +76,10 @@
 
         &__textarea {
             height: 132px;
+        }
+
+        &__item--long {
+            gap: 8px;
         }
     }
 }

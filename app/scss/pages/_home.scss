@@ -63,7 +63,7 @@ body {
     }
 
     &__tabs {
-        margin-bottom: clamp(42px, 10vw, 100px);
+        margin-bottom: clamp(44px, 10vw, 100px);
     }
 }
 
@@ -268,8 +268,15 @@ body {
         max-width: 250px;
     }
 
-    .action__image {
-        width: 130px;
-        height: 133px;
+    .action {
+        &__image {
+            width: 130px;
+            height: 133px;
+        }
+
+        &__text {
+            max-width: 291px;
+            margin: 0 auto;
+        }
     }
 }
