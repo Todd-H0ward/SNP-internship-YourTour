@@ -42,11 +42,14 @@
 
 .big-btn {
     @extend .p-normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     //@extend . flex-row;
     //align-items: center;
-    text-align: center;
     max-width: 235px;
-    min-width: 134px;
+    min-width: 133px;
     width: 100%;
     padding: 15px 30px;
     color: $white;

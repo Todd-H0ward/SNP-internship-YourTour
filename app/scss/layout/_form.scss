@@ -28,10 +28,9 @@
     &__agreement {
         @extend .p-small;
         color: $gray-300;
-    }
-
-    &__checkbox {
-        margin-right: 19px;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: nowrap;
     }
 
     &__textarea {
@@ -52,13 +51,26 @@
 }
 
 @media (max-width: 768px) {
-    .form__item {
-        grid-column: span 2;
+    .form {
+        padding: clamp(20px, 7vw, 60px);
+
+        &__item {
+            grid-column: span 2;
+        }
+
+        &__agreement {
+            justify-content: left;
+            align-items: flex-start;
+        }
     }
 }
 
 @media (max-width: 375px) {
     .form {
         padding: 20px 20px 40px;
+
+        &__textarea {
+            height: 132px;
+        }
     }
 }

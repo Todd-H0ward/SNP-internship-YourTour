@@ -1,5 +1,5 @@
 const header = document.querySelector(".header");
-const menu = document.querySelector(".menu__list");
+const menuLinks = document.querySelectorAll(".scroll-link");
 
 const scrollToElem = (elem) => {
     const rect = elem.getBoundingClientRect();
@@ -12,14 +12,11 @@ const scrollToElem = (elem) => {
     })
 }
 
-menu.addEventListener("click", (event) => {
+menuLinks.forEach(link => link.addEventListener("click", (event) => {
     event.preventDefault();
-    const elem = event.target;
-    if (elem !== null && elem.classList.contains("menu__link")) {
-        const target = document.querySelector(elem.hash);
-        scrollToElem(target);
-    }
-})
+    const target = document.querySelector(event.target.hash);
+    scrollToElem(target);
+}))
 
 
 window.addEventListener("scroll", () => {

@@ -42,6 +42,7 @@
 
 .checkbox {
     @extend .flex-row;
+    flex: none;
     width: 26px;
     height: 26px;
     border: 2px solid $black;
@@ -64,7 +65,23 @@
     flex-wrap: wrap;
     justify-content: left;
 
+    &--text {
+        flex-wrap: wrap;
+    }
+
     &--no-gap {
         gap: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .input {
+        padding: 10px;
+    }
+
+    .checkbox,
+    .radio{
+        width: 20px;
+        height: 20px;
     }
 }

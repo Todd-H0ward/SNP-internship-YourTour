@@ -52,3 +52,9 @@
         align-items: center;
     }
 }
+
+@media (max-width: 375px) {
+    .header__container {
+        padding: 0 20px !important;
+    }
+}

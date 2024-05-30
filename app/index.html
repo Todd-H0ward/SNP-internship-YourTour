@@ -7,7 +7,7 @@
     <meta name="keywords" content="traveling snp internship">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="icon" href="images/icons/favicon.svg">
-    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -29,16 +29,16 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link" href="#choice">Туры</a>
+                                <a class="menu__link scroll-link" href="#choice">Туры</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#make">Создать тур</a>
+                                <a class="menu__link scroll-link" href="#make">Создать тур</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#reviews">Отзывы</a>
+                                <a class="menu__link scroll-link" href="#reviews">Отзывы</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#history">Истории</a>
+                                <a class="menu__link scroll-link" href="#history">Истории</a>
                             </li>
                         </ul>
                     </nav>
@@ -51,7 +51,7 @@
                 <div class="intro__inner">
                     <h1 class="intro__title">Идеальные путешествия существуют</h1>
                     <p class="intro__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                    <button class="intro__btn btn">Найти тур</button>
+                    <a href="#choice" class="intro__btn btn scroll-link">Найти тур</a>
                 </div>
             </div>
         </section>
@@ -170,7 +170,8 @@
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label form__agreement label--no-gap">
-                            <input class="form__checkbox checkbox" name="agreement" type="checkbox"> Нажимая кнопку, я принимаю условия <a class="form__link link" href="#">Лицензионного договора</a>
+                            <input class="form__checkbox checkbox" name="agreement" type="checkbox">
+                            <span class="label__text">Нажимая кнопку, я принимаю условия <a class="form__link link" href="#">Лицензионного договора</a></span>
                         </label>
                     </div>
                     <div class="form__item form__item--long form__item--group">
@@ -354,7 +355,7 @@
                     <img class="action__image action__item" src="images/footer.jpg" alt="footer image">
                     <div class="action__info action__item">
                         <h3 class="action__title">Пора в путешествие вместе с нами!</h3>
-                        <p class="action__text">Напиши на почту и узнай подробности на <a class="action__link link">yourtour@gmail.com</a></p>
+                        <p class="action__text">Напиши на почту и узнай подробности на <a class="action__link link" href="mailto:yourtour@gmail.com">yourtour@gmail.com</a></p>
                     </div>
                 </div>
             </div>
