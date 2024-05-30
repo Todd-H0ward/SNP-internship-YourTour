@@ -124,12 +124,12 @@
                 <form class="make__form grid form">
                     <div class="form__item">
                         <label class="label" for="name">Имя</label>
-                        <input class="input" type="text" id="name" placeholder="Введите Ваше имя">
+                        <input class="input" type="text" id="name" placeholder="Введите Ваше имя" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="direction">Направление</label>
                         <div class="dropdown-wrapper">
-                            <select class="input dropdown" name="direction" id="direction">
+                            <select class="input dropdown" name="direction" id="direction" required>
                                 <option value="" selected disabled hidden>Куда хотие ехать?</option>
                                 <option value="istanbul">Стамбул</option>
                                 <option value="yerevan">Ереван</option>
@@ -139,19 +139,19 @@
                     </div>
                     <div class="form__item">
                         <label class="label" for="email">Email</label>
-                        <input class="input" type="text" id="email" placeholder="example@mail.com">
+                        <input class="input" type="text" id="email" placeholder="example@mail.com" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="tel">Телефон</label>
-                        <input class="input phone-input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                        <input class="input phone-input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="from">Дата от</label>
-                        <input class="input" id="from" placeholder="ДД.ММ.ГГГГ">
+                        <input class="input" id="from" placeholder="ДД.ММ.ГГГГ" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="to">Дата до</label>
-                        <input class="input" id="to" placeholder="ДД.ММ.ГГГГ">
+                        <input class="input" id="to" placeholder="ДД.ММ.ГГГГ" required>
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label" for="comment">Комментарий</label>
