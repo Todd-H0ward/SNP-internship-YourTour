@@ -3,10 +3,7 @@
 .footer {
     padding: clamp(21px, 4vw, 30px) 0;
     background: $beige-200;
-
-    &__text {
-        color: $gray-300;
-    }
+    color: $gray-300;
 
     &__inner {
         @extend .flex-row;
@@ -26,7 +23,7 @@
         gap: clamp(5px, 1vw, 10px);
     }
 
-    &__text {
+    &__social {
         position: relative;
         color: $black;
         &::after {
