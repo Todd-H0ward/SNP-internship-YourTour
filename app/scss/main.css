@@ -259,7 +259,7 @@ meter {
   content: "";
   width: 24px;
   height: 26px;
-  background: url("../../images/icons/arrow-icon.svg");
+  background: url("../images/icons/arrow-icon.svg");
 }
 
 .big-btn {
@@ -458,7 +458,7 @@ meter {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: url("../../images/icons/dropdown-icon.svg");
+  background: url("../images/icons/dropdown-icon.svg");
   top: 50%;
   right: 20px;
   z-index: 100;
