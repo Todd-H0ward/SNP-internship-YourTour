@@ -8,6 +8,10 @@
     background: $beige-100;
     transition: all .3s;
 
+    &--invalid {
+
+    }
+
     &::placeholder {
         color: $gray-300;
     }
@@ -22,66 +26,9 @@
     }
 }
 
-.radio {
-    @extend .flex-row;
-    width: clamp(20px, 5vw, 26px);
-    height: clamp(20px, 5vw, 26px);
-    border: 2px solid $black;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:checked::before {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        background: $black;
-        border-radius: 50%;
-    }
-}
-
-.checkbox {
-    @extend .flex-row;
-    flex: none;
-    width: 26px;
-    height: 26px;
-    border: 2px solid $black;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:checked::before {
-        content: "";
-        display: block;
-        width: 13px;
-        height: 10px;
-        background: url("../images/icons/checkbox-arrow.svg");
-    }
-}
-
-.label {
-    @extend .p-normal;
-    @extend .flex-row;
-    gap: clamp(10px, 40vw, 11px);
-    flex-wrap: wrap;
-    justify-content: left;
-
-    &--text {
-        flex-wrap: wrap;
-    }
-
-    &--no-gap {
-        gap: 0;
-    }
-}
 
 @media (max-width: 375px) {
     .input {
         padding: 10px;
-    }
-
-    .checkbox,
-    .radio{
-        width: 20px;
-        height: 20px;
     }
 }

@@ -1,0 +1,26 @@
+@import "../utils/variables";
+
+.radio {
+    @extend .flex-row;
+    width: clamp(20px, 5vw, 26px);
+    height: clamp(20px, 5vw, 26px);
+    border: 2px solid $black;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:checked::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: $black;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 375px) {
+    .radio{
+        width: 20px;
+        height: 20px;
+    }
+}

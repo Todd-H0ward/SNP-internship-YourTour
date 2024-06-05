@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.label {
+    @extend .p-normal;
+    @extend .flex-row;
+    gap: clamp(10px, 40vw, 11px);
+    flex-wrap: wrap;
+    justify-content: left;
+
+    &--text {
+        flex-wrap: wrap;
+    }
+
+    &--no-gap {
+        gap: 0;
+    }
+}

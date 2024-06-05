@@ -6,13 +6,19 @@
 
 @import "utils/variables";
 
-@import "components/buttons";
+@import "components/arrow-button";
+@import "components/big-button";
+@import "components/button";
 @import "components/card";
 @import "components/card-history";
 @import "components/card-review";
+@import "components/checkbox";
 @import "components/dropdown";
 @import "components/input";
+@import "components/label";
+@import "components/radio";
 @import "components/tabs";
+@import "components/textarea";
 
 @import "layout/grid";
 @import "layout/form";
