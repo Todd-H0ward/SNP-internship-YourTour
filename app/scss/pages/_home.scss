@@ -10,15 +10,15 @@ body {
 
 .wrapper {
     @extend .flex-column;
-    gap: clamp(75px, 20vw, 135px);
+    gap: clamp(75px, 2.521rem + 9.24vw, 135px);
     align-items: stretch;
     overflow: hidden;
 }
 
 .container {
-    max-width: calc(1170px + 2 * clamp(21px, 5.8vw, 53px));
+    max-width: calc(1170px + 2 * $container-padding);
     width: 100%;
-    padding: 0 clamp(21px, 5.8vw, 53px);
+    padding: 0 $container-padding;
     margin: 0 auto;
 }
 
@@ -29,14 +29,14 @@ body {
 // intro
 
 .intro {
-    padding: 207px 0 119px;
+    padding: clamp(140px, 6.33rem + 10.32vw, 207px) 0 clamp(52px, 0.83rem + 10.32vw, 119px);
     background: url("../images/header-bg.jpg") no-repeat;
     background-size: cover;
     color: $white;
 
     &__inner {
         @extend .flex-column;
-        gap: 50px;
+        gap: clamp(40px, 2.139rem + 1.54vw, 50px);
         max-width: 768px;
         margin: 0 auto;
     }
@@ -59,11 +59,11 @@ body {
     text-align: center;
 
     &__title {
-        margin-bottom: 35px;
+        margin-bottom: clamp(30px, 1.694rem + 0.77vw, 35px);
     }
 
     &__tabs {
-        margin-bottom: clamp(44px, 10vw, 100px);
+        margin-bottom: clamp(44px, 0.728rem + 8.63vw, 100px);
     }
 }
 
@@ -77,7 +77,7 @@ body {
 
 .photos {
     &__container {
-        max-width: 1860px;
+        max-width: 1920px;
         width: 100%;
         margin: 0 auto;
         padding: 0 30px;
@@ -85,7 +85,8 @@ body {
 
     &__grid {
         grid-template-columns: repeat(20, 1fr);
-        grid-column-gap: 30px;
+        grid-column-gap: clamp(20px, -0.288rem + 2.4vww, 30px);
+        grid-row-gap: 30px;
     }
 
     &__wrapper {
@@ -115,7 +116,7 @@ body {
 
 .history__inner {
     @extend .flex-column;
-    gap: clamp(20px, 5vw, 50px);
+    gap: clamp(20px, 0.167rem + 4.62vw, 50px);
 }
 
 // Action
@@ -126,13 +127,15 @@ body {
         gap: 30px;
     }
 
-    &__image {
-        border-radius: $border-radius-change;
-        width: 370px;
+    &__item {
+        max-width: clamp(295px, 4.375rem + 29.3vw, 370px);
+        width: 100%;
     }
 
-    &__item {
-        max-width: 370px;
+    &__image {
+        border-radius: $border-radius-change;
+        width: clamp(130px, -0.542rem + 36.98vw, 370px);
+        height: clamp(133px, -0.246rem + 36.52vw, 370px);
     }
 
     &__info {
@@ -167,32 +170,20 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .wrapper {
-        gap: clamp(75px, 15vw, 135px);
-    }
-
     // Intro
-
     .intro__subtitle {
         max-width: 440px;
-    }
-
-    // Choice
-
-    .choice {
-        &__title {
-            margin-bottom: clamp(30px, 5vw, 35px)
-        }
     }
 
     .photos {
         &__container {
             padding: 0 20px;
         }
+
         &__grid {
             grid-template-columns: repeat(12, 1fr);
-            grid-column-gap: 20px;
-            grid-row-gap: 30px;
+            grid-column-gap: clamp(10px, 1.053rem + 0.31vw, 20px);
+            grid-row-gap: clamp(18px, 0.692rem + 1.85vw, 30px);
         }
 
         &__wrapper {
@@ -211,27 +202,12 @@ body {
             }
         }
     }
-
-    // Action
-    .action {
-        &__image {
-            width: clamp(130px, 40vw, 370px);
-        }
-    }
 }
 
 @media (max-width: 768px) {
-    .intro {
-        padding: clamp(140px, 3vw, 207px) 0 clamp(52px, 3vw, 119px);
-        &__inner {
-            gap: clamp(40px, 7vw, 50px);
-        }
-    }
-
     .photos {
         &__grid {
             grid-template-columns: repeat(6, 1fr);
-            grid-row-gap: 18px;
             grid-column-gap: 10px;
         }
 
@@ -253,9 +229,12 @@ body {
     }
 
     .action {
-        &__image {
-            width: clamp(310px, 10wv, 130px);
-            border-radius: $border-radius-small;
+        &__item {
+            max-width: 100%;
+        }
+
+        &__info {
+            align-items: center;
         }
 
         &__inner {
@@ -266,6 +245,10 @@ body {
 }
 
 @media (max-width: 375px) {
+    .intro__subtitle {
+        max-width: 250px;
+    }
+
     .photos__container {
         padding: 0 21px;
     }
@@ -274,19 +257,15 @@ body {
         margin-bottom: 40px;
     }
 
-    .intro__subtitle {
-        max-width: 250px;
+    .action__text {
+        max-width: 291px;
+        margin: 0 auto;
     }
+}
 
-    .action {
-        &__image {
-            width: 130px;
-            height: 133px;
-        }
-
-        &__text {
-            max-width: 291px;
-            margin: 0 auto;
-        }
+@media (max-width: 320px) {
+    .container {
+        max-width: 1190px;
+        padding: 0 10px;
     }
 }

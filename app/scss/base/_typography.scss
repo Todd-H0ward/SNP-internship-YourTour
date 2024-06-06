@@ -13,14 +13,12 @@
     font-size: clamp(2.125rem, 1.278rem + 3.77vw, 3.688rem);
     font-weight: 700;
     line-height: clamp(2.38rem, 1.191rem + 5.28vw, 4.572rem);
-    letter-spacing: clamp(0rem, -0.023rem + 0.1vw, 0.043rem);
 }
 
 .h3 {
     font-size: clamp(1.438rem, 1.031rem + 1.81vw, 2.188rem);
-    font-weight: clamp(500, 6vw, 700);
+    font-weight: 500;
     line-height: clamp(1.725rem, 1.213rem + 2.27vw, 2.669rem);
-    letter-spacing: clamp(0rem, -0.031rem + 0.14vw, 0.058rem);
 }
 
 .p-big {
@@ -40,4 +38,15 @@
     font-weight: 400;
     line-height: clamp(1.42rem, 1.372rem + 0.21vw, 1.509rem);
     letter-spacing: clamp(-0.011rem, -0.011rem + 0vw, -0.01rem);
+}
+
+@media (max-width: 768px) {
+    .h2 {
+        letter-spacing: 0.68px;
+    }
+
+    .h3 {
+        font-weight: 700;
+        letter-spacing: 0.92px;
+    }
 }
