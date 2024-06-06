@@ -1,7 +1,7 @@
 @import "../utils/variables";
 
 .footer {
-    padding: clamp(21px, 4vw, 30px) 0;
+    padding: clamp(21px, 0.987rem + 1.39vw, 30px) 0;
     background: $beige-200;
     color: $gray-300;
 
@@ -15,7 +15,7 @@
 
     &__socials {
         @extend .flex-row;
-        gap: clamp(15px, 3vw, 25px)
+        gap: clamp(15px, 0.576rem + 1.54vw, 25px)
     }
 
     &__link {

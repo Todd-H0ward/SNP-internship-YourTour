@@ -12,7 +12,7 @@
         border-radius: 50%;
         background: url("../images/icons/dropdown-icon.svg");
         top: 50%;
-        right: 20px;
+        right: clamp(10px, 0.264rem + 1.54vw, 20px);
         z-index: 20;
         transform: translateY(-50%);
         transition: all .3s;

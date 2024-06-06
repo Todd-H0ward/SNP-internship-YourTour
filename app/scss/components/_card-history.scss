@@ -9,7 +9,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: clamp(455px, 80vw, 567px);
+    height: clamp(455px, 24.393rem + 17.26vw, 567px);
 
     &__image {
         @extend .bg-image;
@@ -60,7 +60,7 @@
     &__socials-list {
         @extend .flex-row;
         flex-wrap: wrap;
-        column-gap: clamp(5px, 2vw, 35px);
+        column-gap: clamp(10px, -0.484rem + 4.17vw, 35px);
     }
 
     &__socials-item {
@@ -87,7 +87,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .card-history {
         &__title {
             max-width: 145px;

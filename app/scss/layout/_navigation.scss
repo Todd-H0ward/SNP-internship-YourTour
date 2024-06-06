@@ -2,7 +2,7 @@
 
 .menu__list {
     @extend .flex-row;
-    gap: clamp(15px, 1.85vw, 50px);
+    gap: 50px;
 }
 
 .menu__link {
@@ -16,6 +16,12 @@
 
     &:hover::after {
         width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu__list {
+        gap: clamp(15px, -1.875rem + 5.86vw, 30px);
     }
 }
 
