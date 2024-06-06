@@ -1,5 +1,6 @@
 const header = document.querySelector(".header");
 const menuLinks = document.querySelectorAll(".scroll-link");
+const form = document.querySelector(".form");
 
 const scrollToElem = (elem) => {
     const rect = elem.getBoundingClientRect();
@@ -26,4 +27,3 @@ window.addEventListener("scroll", () => {
         header.classList.remove("header-fixed");
     }
 })
-
