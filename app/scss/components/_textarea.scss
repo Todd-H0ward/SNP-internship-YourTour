@@ -1,0 +1,21 @@
+@import "../utils/variables";
+
+.textarea {
+    @extend .input;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        margin-right: 10px;
+        background: rgba($black, .3);
+        border-radius: 10px;
+        &:hover {
+            background: rgba($black, .6);
+        }
+    }
+}

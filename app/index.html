@@ -42,7 +42,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="tel:89999999999" class="header__phone-link p-normal">+7 999 999 99 99</a>
+                    <a class="header__phone-link p-normal" href="tel:89999999999">+7 999 999 99 99</a>
                 </div>
             </div>
         </header>
@@ -51,7 +51,7 @@
                 <div class="intro__inner">
                     <h1 class="intro__title">Идеальные путешествия существуют</h1>
                     <p class="intro__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-                    <a href="#choice" class="intro__btn btn scroll-link">Найти тур</a>
+                    <a class="intro__btn btn scroll-link" href="#choice">Найти тур</a>
                 </div>
             </div>
         </section>
@@ -119,12 +119,12 @@
         </section>
         <section class="make" id="make">
             <div class="container">
-                <h2 class="title">Собери свой тур</h2>
+                <h2 class="make__title title">Собери свой тур</h2>
                 <p class="make__subtitle subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
                 <form class="make__form grid form">
                     <div class="form__item">
                         <label class="label" for="name">Имя</label>
-                        <input class="input" type="text" id="name" placeholder="Введите Ваше имя" required>
+                        <input class="input" type="text" id="name" placeholder="Введите Ваше имя" minlength="2" maxlength="20" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="direction">Направление</label>
@@ -139,32 +139,32 @@
                     </div>
                     <div class="form__item">
                         <label class="label" for="email">Email</label>
-                        <input class="input" type="text" id="email" placeholder="example@mail.com" required>
+                        <input class="input" type="email" id="email" placeholder="example@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="tel">Телефон</label>
-                        <input class="input phone-input" type="text" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
+                        <input class="input" type="tel" id="tel" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="from">Дата от</label>
-                        <input class="input" id="from" placeholder="ДД.ММ.ГГГГ" required>
+                        <input class="input" type="date" id="from" placeholder="ДД.ММ.ГГГГ" max="2050-12-31" required>
                     </div>
                     <div class="form__item">
                         <label class="label" for="to">Дата до</label>
-                        <input class="input" id="to" placeholder="ДД.ММ.ГГГГ" required>
+                        <input class="input" type="date" id="to" placeholder="ДД.ММ.ГГГГ" max="2077-12-31" required>
                     </div>
                     <div class="form__item form__item--long">
                         <label class="label" for="comment">Комментарий</label>
-                        <textarea id="comment" class="input form__textarea"></textarea>
+                        <textarea class="textarea form__textarea" id="comment"></textarea>
                     </div>
                     <div class="form__item form__item--long">
                         <p class="form__text">Вам есть 18 лет?</p>
                         <div class="form__radio-btns">
                             <label class="label label--radio">
-                                <input class="radio" type="radio" name="is_adult" value="yes"> Да
+                                <input class="radio" type="radio" name="is_adult" value="yes" required> Да
                             </label>
                             <label class="label label--radio">
-                                <input class="radio" type="radio" name="is_adult" value="no"> Нет
+                                <input class="radio" type="radio" name="is_adult" value="no" required> Нет
                             </label>
                         </div>
                     </div>
@@ -217,49 +217,51 @@
             </div>
         </section>
         <section class="photos" id="photos">
-            <h2 class="photos__title title">Фотографии путешествий</h2>
-            <p class="photos__subtitle subtitle">
-                Идейные соображения высшего порядка, а также рамки и место обучения кадров
-            </p>
-            <div class="photos__grid grid">
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-1.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-2.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-3.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-4.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-5.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-6.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-7.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-8.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-9.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-10.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-11.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-12.jpg" alt="travel photo">
-                </div>
-                <div class="photos__wrapper">
-                    <img class="photos__item" src="images/places/travel-13.jpg" alt="travel photo">
+            <div class="photos__container">
+                <h2 class="photos__title title">Фотографии путешествий</h2>
+                <p class="photos__subtitle subtitle">
+                    Идейные соображения высшего порядка, а также рамки и место обучения кадров
+                </p>
+                <div class="photos__grid grid">
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-1.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-2.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-3.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-4.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-5.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-6.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-7.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-8.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-9.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-10.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-11.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-12.jpg" alt="travel photo">
+                    </div>
+                    <div class="photos__wrapper">
+                        <img class="photos__item" src="images/places/travel-13.jpg" alt="travel photo">
+                    </div>
                 </div>
             </div>
         </section>
@@ -350,7 +352,7 @@
             </div>
         </section>
         <section class="action" id="action">
-            <div class="container">
+            <div class="action__container container">
                 <div class="action__inner">
                     <img class="action__image action__item" src="images/footer.jpg" alt="footer image">
                     <div class="action__info action__item">

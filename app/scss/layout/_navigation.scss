@@ -2,7 +2,7 @@
 
 .menu__list {
     @extend .flex-row;
-    gap: clamp(30px, 3vw, 50px);
+    gap: clamp(15px, 1.85vw, 50px);
 }
 
 .menu__link {

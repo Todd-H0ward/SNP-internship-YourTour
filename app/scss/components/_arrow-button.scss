@@ -1,0 +1,19 @@
+@import "../utils/variables";
+
+.arrow-btn {
+    @extend .p-big;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 20px;
+    gap: 15px;
+    border-radius: $border-radius;
+    transition: all .3s;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 24px;
+        height: 26px;
+        background: url("../images/icons/arrow-icon.svg");
+    }
+}
