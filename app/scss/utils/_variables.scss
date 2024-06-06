@@ -2,7 +2,8 @@ $border-radius: 50px;
 $border-radius-middle: 30px;
 $border-radius-small: 20px;
 
-$border-radius-change: clamp($border-radius-small, 5vw, $border-radius);
+$border-radius-change: clamp($border-radius-small, 0.167rem + 4.62vw, $border-radius);
+$container-padding: clamp(21px, 0.157rem + 4.93vw, 53px);
 
 /* Colors */
 $black: #1B1F2B;

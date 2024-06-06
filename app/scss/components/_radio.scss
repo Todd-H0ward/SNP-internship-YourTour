@@ -1,26 +1,23 @@
 @import "../utils/variables";
 
 .radio {
-    @extend .flex-row;
-    width: clamp(20px, 5vw, 26px);
-    height: clamp(20px, 5vw, 26px);
+    width: clamp(20px, 1.033rem + 0.92vw, 26px);
+    height: clamp(20px, 1.033rem + 0.92vw, 26px);
     border: 2px solid $black;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
 
     &:checked::before {
         content: "";
         display: block;
-        width: 12px;
-        height: 12px;
+        width: clamp(8px, 0.454rem + 0.46vw, 12px);
+        height: clamp(8px, 0.454rem + 0.46vw, 12px);
         background: $black;
         border-radius: 50%;
-    }
-}
-
-@media (max-width: 375px) {
-    .radio{
-        width: 20px;
-        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
