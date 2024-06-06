@@ -3,7 +3,7 @@
 .card-review {
     @extend .flex-column;
     grid-column: span 6;
-    padding: clamp(20px, 5vw, 40px);
+    padding: clamp(20px, 0.528rem + 3.08vw, 40px);
     border-radius: $border-radius-change;
     background: $beige-200;
 
@@ -11,7 +11,7 @@
         @extend .p-big;
         margin-bottom: auto;
         &:nth-child(2) {
-            margin-top: 28px;
+            margin-top: clamp(23px, 1.257rem + 0.77vw, 28px);
         }
     }
 

@@ -3,8 +3,8 @@
 .checkbox {
     @extend .flex-row;
     flex: none;
-    width: 26px;
-    height: 26px;
+    width: clamp(20px, 1.033rem + 0.92vw, 26px);
+    height: clamp(20px, 1.033rem + 0.92vw, 26px);
     border: 2px solid $black;
     border-radius: 5px;
     cursor: pointer;
@@ -15,12 +15,5 @@
         width: 13px;
         height: 10px;
         background: url("../images/icons/checkbox-arrow.svg");
-    }
-}
-
-@media (max-width: 375px) {
-    .checkbox {
-        width: 20px;
-        height: 20px;
     }
 }
