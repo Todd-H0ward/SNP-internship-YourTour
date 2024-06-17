@@ -2,6 +2,7 @@
 
 .textarea {
     @extend .input;
+
     overflow-y: auto;
     overflow-x: hidden;
     white-space: pre-wrap;
@@ -13,8 +14,10 @@
 
     &::-webkit-scrollbar-thumb {
         margin-right: 10px;
+
         background: rgba($black, .3);
         border-radius: 10px;
+
         &:hover {
             background: rgba($black, .6);
         }

@@ -2,21 +2,24 @@
 
 .btn {
     @extend .p-small;
+
     padding: 5px 20px;
-    border-radius: 10px;
+
     color: $black;
     background: $white;
+    border-radius: 10px;
     cursor: pointer;
+
     transition: background .4s, color .2s;
 
     &:hover {
-        background: $orange-200;
         color: $white;
+        background: $orange-200;
     }
 
     &:active {
-        background: $orange-100;
         color: $black;
+        background: $orange-100;
     }
 }
 

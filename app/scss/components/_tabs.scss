@@ -10,16 +10,20 @@
 
     &__item {
         @extend .p-big;
-        cursor: pointer;
+
         position: relative;
+
         padding-bottom: 6px;
+
+        cursor: pointer;
 
         &--active {
             color: $orange-200;
 
             &::after {
-                background: $orange-200;
                 width: 100%;
+
+                background: $orange-200;
             }
         }
 

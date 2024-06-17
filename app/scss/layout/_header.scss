@@ -1,13 +1,15 @@
 @import "../utils/variables";
 
 .header {
-    padding: 29px 0;
-    color: $white;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
+
+    padding: 29px 0;
+    color: $white;
+
     transition: all .3s;
 
     &__inner {
@@ -19,6 +21,7 @@
 
 .header-fixed {
     position: fixed;
+
     color: $black;
     background: rgba(243, 239, 232, 0.60);
     backdrop-filter: blur(27px);
