@@ -2,37 +2,48 @@
 
 .title {
     @extend .h2;
-    text-align: center;
+
     margin: 0 auto clamp(20px, 3vw, 30px);
+
+    text-align: center;
 }
 
 .subtitle {
     @extend .p-normal;
+
     max-width: 405px;
-    color: $gray-300;
-    text-align: center;
     margin: 0 auto clamp(50px, 10vw, 100px);
+
+    text-align: center;
+
+    color: $gray-300;
 }
 
 .bg-image {
-    height: 100%;
     width: 100%;
+    height: 100%;
+
     object-fit: cover;
     object-position: center;
+
     transition: all .3s ease;
 }
 
 .underline {
-    content: "";
     position: absolute;
     left: 0;
     right: 0;
+
     display: block;
     width: 0;
     height: 1px;
     margin: 0 auto;
+
     background: $black;
+
     transition: width .3s;
+
+    content: "";
 }
 
 .flex-column  {

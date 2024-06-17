@@ -2,19 +2,23 @@
 
 .card {
     @extend .flex-column;
+
+    position: relative;
+
     align-items: stretch;
-    text-align: left;
     grid-column: span 4;
     width: 100%;
-    //max-height: 531px;
     height: clamp(318px, 12.183rem + 32.82vw, 531px);
+
+    text-align: left;
+
     border-radius: $border-radius-change;
-    position: relative;
     overflow: hidden;
     cursor: pointer;
 
     &__title {
         @extend .h3;
+
         max-width: 230px;
     }
 
@@ -24,18 +28,22 @@
 
     &__content {
         @extend .flex-column;
-        gap: 16px;
-        color: $white;
-        align-items: flex-start;
-        text-align: left;
-        grid-column: span 4;
-        padding: clamp(30px, -1.202rem + 4.81vw, 50px);
+
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 5;
+
+        align-items: flex-start;
+        grid-column: span 4;
+        gap: 16px;
+        padding: clamp(30px, -1.202rem + 4.81vw, 50px);
+
+        text-align: left;
+
+        color: $white;
         background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
     }
 
@@ -45,6 +53,7 @@
 
     &__price {
         @extend .p-small;
+
         margin-bottom: auto;
     }
 
@@ -62,6 +71,7 @@
 @media (max-width: 1024px) {
     .card {
         grid-column: span 6;
+
         &__title {
             max-width: 100%;
         }

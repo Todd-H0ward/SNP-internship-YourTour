@@ -2,14 +2,18 @@
 
 .card-review {
     @extend .flex-column;
+
     grid-column: span 6;
     padding: clamp(20px, 0.528rem + 3.08vw, 40px);
-    border-radius: $border-radius-change;
+
     background: $beige-200;
+    border-radius: $border-radius-change;
 
     &__text {
         @extend .p-big;
+
         margin-bottom: auto;
+
         &:nth-child(2) {
             margin-top: clamp(23px, 1.257rem + 0.77vw, 28px);
         }
@@ -17,9 +21,9 @@
 
     &__info {
         display: flex;
-        padding-top: clamp(40px, 10vw, 70px);
         align-items: flex-end;
         align-self: stretch;
+        padding-top: clamp(40px, 10vw, 70px);
     }
 
     &__inner {
@@ -33,6 +37,7 @@
     &__image {
         width: 75px;
         height: 75px;
+
         border-radius: 50%;
     }
 

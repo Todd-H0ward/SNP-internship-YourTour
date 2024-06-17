@@ -2,24 +2,28 @@
 
 body {
     @extend .p-normal;
+
     font-family: Roboto, sans-serif;
-    color: $black;
     font-style: normal;
+
+    color: $black;
     background: $beige-100;
 }
 
 .wrapper {
     @extend .flex-column;
+
     gap: clamp(75px, 2.521rem + 9.24vw, 135px);
     align-items: stretch;
+
     overflow: hidden;
 }
 
 .container {
     max-width: calc(1170px + 2 * $container-padding);
     width: 100%;
-    padding: 0 $container-padding;
     margin: 0 auto;
+    padding: 0 $container-padding;
 }
 
 .link {
@@ -30,12 +34,14 @@ body {
 
 .intro {
     padding: clamp(140px, 6.33rem + 10.32vw, 207px) 0 clamp(52px, 0.83rem + 10.32vw, 119px);
+
+    color: $white;
     background: url("../images/header-bg.jpg") no-repeat;
     background-size: cover;
-    color: $white;
 
     &__inner {
         @extend .flex-column;
+
         gap: clamp(40px, 2.139rem + 1.54vw, 50px);
         max-width: 768px;
         margin: 0 auto;
@@ -43,13 +49,15 @@ body {
 
     &__title {
         @extend .h1;
+
         text-align: center;
     }
 
     &__subtitle {
         max-width: 562px;
-        color: $white;
         margin-bottom: 0;
+
+        color: $white;
     }
 }
 
@@ -91,11 +99,14 @@ body {
 
     &__wrapper {
         @extend .flex-row;
+
         align-items: stretch;
-        min-height: 301px;
-        border-radius: $border-radius-change;
         grid-column: span 5;
+        min-height: 301px;
+
+        border-radius: $border-radius-change;
         overflow: hidden;
+
         &:nth-child(5),
         &:nth-child(6),
         &:nth-child(7),
@@ -108,6 +119,7 @@ body {
     &__item {
         max-width: 100%;
         height: auto;
+
         object-fit: cover;
     }
 }
@@ -116,6 +128,7 @@ body {
 
 .history__inner {
     @extend .flex-column;
+
     gap: clamp(20px, 0.167rem + 4.62vw, 50px);
 }
 
@@ -124,6 +137,7 @@ body {
 .action {
     &__inner {
         @extend .flex-row;
+
         gap: 30px;
     }
 
@@ -133,13 +147,15 @@ body {
     }
 
     &__image {
-        border-radius: $border-radius-change;
         width: clamp(130px, -0.542rem + 36.98vw, 370px);
         height: clamp(133px, -0.246rem + 36.52vw, 370px);
+
+        border-radius: $border-radius-change;
     }
 
     &__info {
         @extend .flex-column;
+
         gap: 20px;
         justify-content: center;
         align-items: flex-start;
@@ -151,6 +167,7 @@ body {
 
     &__text {
         color: $gray-300;
+
         &--accent {
             color: $black;
         }
@@ -171,6 +188,7 @@ body {
 
 @media (max-width: 1024px) {
     // Intro
+
     .intro__subtitle {
         max-width: 440px;
     }
@@ -188,6 +206,7 @@ body {
 
         &__wrapper {
             grid-column: span 4;
+
             &:nth-child(5),
             &:nth-child(6),
             &:nth-child(8),
@@ -212,8 +231,9 @@ body {
         }
 
         &__wrapper {
-            min-height: 110px;
             grid-column: span 3;
+            min-height: 110px;
+
             &:nth-child(6),
             &:nth-child(8),
             &:nth-child(9) {

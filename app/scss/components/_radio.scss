@@ -1,23 +1,28 @@
 @import "../utils/variables";
 
 .radio {
+    position: relative;
+
     width: clamp(20px, 1.033rem + 0.92vw, 26px);
     height: clamp(20px, 1.033rem + 0.92vw, 26px);
+
     border: 2px solid $black;
     border-radius: 50%;
     cursor: pointer;
-    position: relative;
 
     &:checked::before {
-        content: "";
-        display: block;
-        width: clamp(8px, 0.454rem + 0.46vw, 12px);
-        height: clamp(8px, 0.454rem + 0.46vw, 12px);
-        background: $black;
-        border-radius: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
+
+        display: block;
+        width: clamp(8px, 0.454rem + 0.46vw, 12px);
+        height: clamp(8px, 0.454rem + 0.46vw, 12px);
+
+        background: $black;
+        border-radius: 50%;
         transform: translate(-50%, -50%);
+
+        content: "";
     }
 }
