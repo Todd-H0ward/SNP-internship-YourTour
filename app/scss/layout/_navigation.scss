@@ -2,12 +2,14 @@
 
 .menu__list {
     @extend .flex-row;
+
     gap: 50px;
 }
 
 .menu__link {
-    position: relative;
     @extend .p-normal;
+
+    position: relative;
 
     &::after {
         @extend .underline;

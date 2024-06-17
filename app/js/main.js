@@ -1,6 +1,5 @@
 const header = document.querySelector(".header");
 const menuLinks = document.querySelectorAll(".scroll-link");
-const form = document.querySelector(".form");
 
 const scrollToElem = (elem) => {
     const rect = elem.getBoundingClientRect();
@@ -18,7 +17,6 @@ menuLinks.forEach(link => link.addEventListener("click", (event) => {
     const target = document.querySelector(event.target.hash);
     scrollToElem(target);
 }))
-
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 450) {

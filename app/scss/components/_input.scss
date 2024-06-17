@@ -2,16 +2,20 @@
 
 .input {
     @extend .p-normal;
-    padding: clamp(10px, 0.264rem + 1.54vw, 20px);
+
     height: clamp(43px, 1.785rem + 3.85vw, 68px);
+    padding: clamp(10px, 0.264rem + 1.54vw, 20px);
+
+    background: $beige-100;
     border: 1px solid $beige-200;
     border-radius: 10px;
-    background: $beige-100;
+
     transition: all .3s;
 
     &--date {
         text-transform: uppercase;
-        color: $gray-300
+
+        color: $gray-300;
     }
 
     &::placeholder {
@@ -23,7 +27,7 @@
     }
 
     &:focus {
-        border-color: $gray-300;
         background: $beige-200;
+        border-color: $gray-300;
     }
 }

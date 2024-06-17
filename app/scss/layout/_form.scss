@@ -2,18 +2,21 @@
 @import "../utils/variables";
 
 .form {
-    padding: clamp(60px, 2.212rem + 2.4vw, 70px);
-    background: $white;
-    border-radius: clamp($border-radius-middle, 1.153rem + 3.08vw, $border-radius);
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 33px;
+    padding: clamp(60px, 2.212rem + 2.4vw, 70px);
+
+    background: $white;
+    border-radius: clamp($border-radius-middle, 1.153rem + 3.08vw, $border-radius);
 
     &__item {
         @extend .flex-column;
+
         gap: 8px;
         grid-column: span 1;
-        text-align: left;
         align-items: stretch;
+
+        text-align: left;
 
         &--long {
             grid-column: span 2;
@@ -28,10 +31,12 @@
 
     &__agreement {
         @extend .p-small;
-        color: $gray-300;
+
         flex-direction: row;
         gap: 19px;
         flex-wrap: nowrap;
+
+        color: $gray-300;
     }
 
     &__textarea {
@@ -40,6 +45,7 @@
 
     &__radio-btns {
         @extend .flex-row;
+
         gap: 30px;
         justify-content: left;
     }
@@ -48,6 +54,7 @@
 @media (max-width: 1024px) {
     .form {
         padding: clamp(20px, -0.195rem + 6.16vw, 60px) clamp(20px, -0.195rem + 6.16vw, 60px) clamp(40px, 1.778rem + 3.08vw, 60px);
+
         &__agreement {
             gap: 10px;
         }
