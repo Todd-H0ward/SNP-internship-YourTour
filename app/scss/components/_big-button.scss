@@ -1,8 +1,6 @@
 @import "../utils/variables";
 
 .big-btn {
-    @extend .p-normal;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +9,8 @@
     width: 100%;
     height: clamp(47px, 2.54rem + 1.69vw, 58px);
     padding: 15px 30px;
+
+    @extend .p-normal;
 
     color: $white;
     background: $green-400;

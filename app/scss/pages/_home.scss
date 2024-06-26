@@ -1,10 +1,9 @@
 @import "../utils/variables";
 
 body {
-    @extend .p-normal;
-
     font-family: Roboto, sans-serif;
     font-style: normal;
+    @extend .p-normal;
 
     color: $black;
     background: $beige-100;
@@ -12,7 +11,6 @@ body {
 
 .wrapper {
     @extend .flex-column;
-
     gap: clamp(75px, 2.521rem + 9.24vw, 135px);
     align-items: stretch;
 
@@ -41,7 +39,6 @@ body {
 
     &__inner {
         @extend .flex-column;
-
         gap: clamp(40px, 2.139rem + 1.54vw, 50px);
         max-width: 768px;
         margin: 0 auto;
@@ -49,7 +46,6 @@ body {
 
     &__title {
         @extend .h1;
-
         text-align: center;
     }
 
@@ -99,7 +95,6 @@ body {
 
     &__wrapper {
         @extend .flex-row;
-
         align-items: stretch;
         grid-column: span 5;
         min-height: 301px;
@@ -128,7 +123,6 @@ body {
 
 .history__inner {
     @extend .flex-column;
-
     gap: clamp(20px, 0.167rem + 4.62vw, 50px);
 }
 
@@ -137,7 +131,6 @@ body {
 .action {
     &__inner {
         @extend .flex-row;
-
         gap: 30px;
     }
 
@@ -155,7 +148,6 @@ body {
 
     &__info {
         @extend .flex-column;
-
         gap: 20px;
         justify-content: center;
         align-items: flex-start;

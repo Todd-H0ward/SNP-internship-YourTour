@@ -11,7 +11,6 @@
 
     &__item {
         @extend .flex-column;
-
         gap: 8px;
         grid-column: span 1;
         align-items: stretch;
@@ -30,11 +29,11 @@
     }
 
     &__agreement {
-        @extend .p-small;
-
         flex-direction: row;
         gap: 19px;
         flex-wrap: nowrap;
+
+        @extend .p-small;
 
         color: $gray-300;
     }
@@ -45,9 +44,8 @@
 
     &__radio-btns {
         @extend .flex-row;
-
-        gap: 30px;
         justify-content: left;
+        gap: 30px;
     }
 }
 

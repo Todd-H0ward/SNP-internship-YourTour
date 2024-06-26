@@ -1,9 +1,9 @@
 @import "../utils/variables";
 
 .btn {
-    @extend .p-small;
-
     padding: 5px 20px;
+
+    @extend .p-small;
 
     color: $black;
     background: $white;

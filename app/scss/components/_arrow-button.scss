@@ -1,12 +1,12 @@
 @import "../utils/variables";
 
 .arrow-btn {
-    @extend .p-big;
-
     display: inline-flex;
     align-items: center;
     gap: 15px;
     padding: 7px 20px;
+
+    @extend .p-big;
 
     border-radius: $border-radius;
     cursor: pointer;
