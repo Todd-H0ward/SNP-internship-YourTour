@@ -2,7 +2,6 @@
 
 .checkbox {
     @extend .flex-row;
-
     flex: none;
     width: clamp(20px, 1.033rem + 0.92vw, 26px);
     height: clamp(20px, 1.033rem + 0.92vw, 26px);

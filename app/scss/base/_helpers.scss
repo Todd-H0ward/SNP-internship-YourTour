@@ -1,19 +1,17 @@
 @import "../utils/variables";
 
 .title {
-    @extend .h2;
-
     margin: 0 auto clamp(20px, 3vw, 30px);
 
+    @extend .h2;
     text-align: center;
 }
 
 .subtitle {
-    @extend .p-normal;
-
     max-width: 405px;
     margin: 0 auto clamp(50px, 10vw, 100px);
 
+    @extend .p-normal;
     text-align: center;
 
     color: $gray-300;

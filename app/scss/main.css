@@ -731,8 +731,8 @@ meter {
   height: clamp(132px, 7.528rem + 3.08vw, 152px);
 }
 .form__radio-btns {
-  gap: 30px;
   justify-content: left;
+  gap: 30px;
 }
 
 @media (max-width: 1024px) {

@@ -8,7 +8,6 @@
 
     &__inner {
         @extend .flex-row;
-
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -17,13 +16,11 @@
 
     &__socials {
         @extend .flex-row;
-
-        gap: clamp(15px, 0.576rem + 1.54vw, 25px)
+        gap: clamp(15px, 0.576rem + 1.54vw, 25px);
     }
 
     &__link {
         @extend .flex-row;
-
         gap: clamp(5px, 1vw, 10px);
     }
 

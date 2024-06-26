@@ -1,13 +1,13 @@
 @import "../utils/variables";
 
 .card-history {
-    @extend .p-normal;
-    @extend .flex-row;
-
     position: relative;
 
+    @extend .flex-row;
     align-items: stretch;
     height: clamp(455px, 24.393rem + 17.26vw, 567px);
+
+    @extend .p-normal;
 
     color: $white;
     border-radius: $border-radius-change;
@@ -35,9 +35,9 @@
     }
 
     &__title {
-        @extend .h3;
-
         margin-bottom: clamp(20px, 5vw, 37px);
+
+        @extend .h3;
     }
 
     &__text {
@@ -51,13 +51,12 @@
     }
 
     &__footer {
-        @extend .flex-row;
-
         position: absolute;
         bottom: clamp(30px, 7vw, 60px);
         left: clamp(30px, 7vw, 60px);
         right: clamp(30px, 7vw, 60px);
 
+        @extend .flex-row;
         justify-content: space-between;
         align-items: flex-end;
     }
@@ -68,7 +67,6 @@
 
     &__socials-list {
         @extend .flex-row;
-
         flex-wrap: wrap;
         column-gap: clamp(10px, -0.484rem + 4.17vw, 35px);
     }

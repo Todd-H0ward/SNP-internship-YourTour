@@ -1,10 +1,10 @@
 @import "../utils/variables";
 
 .input {
-    @extend .p-normal;
-
     height: clamp(43px, 1.785rem + 3.85vw, 68px);
     padding: clamp(10px, 0.264rem + 1.54vw, 20px);
+
+    @extend .p-normal;
 
     background: $beige-100;
     border: 1px solid $beige-200;
